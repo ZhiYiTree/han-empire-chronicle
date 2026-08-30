@@ -755,13 +755,17 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
    人物页 · 头像（.p-head / .p-portrait）
    照片放 assets/img/people/{姓名}.jpg，缺失时回落到姓名首字帛书头像
    ================================================================== */
-.p-head{display:flex;gap:34px;align-items:flex-start;margin-top:28px}
-.p-portrait{position:relative;flex:none;width:132px;height:172px;margin:0;overflow:hidden;
-  background:linear-gradient(160deg,#1c1816,#100e0d);border:1px solid var(--line-2)}
+.person-page{--person-frame:#17120e}
+.p-head{display:grid;grid-template-columns:minmax(210px,270px) minmax(0,1fr);gap:52px;align-items:center;margin-top:28px}
+.p-portrait{position:relative;width:100%;aspect-ratio:561/701;margin:0;overflow:hidden;
+  background:linear-gradient(160deg,#1c1816,#100e0d);border:1px solid rgba(168,137,79,.46);
+  box-shadow:0 20px 55px rgba(0,0,0,.48),0 0 0 5px var(--person-frame),0 0 0 6px rgba(168,137,79,.18)}
+.p-portrait::before{content:"";position:absolute;z-index:2;inset:9px;border:1px solid rgba(216,205,187,.2);pointer-events:none}
 .p-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  filter:saturate(.88) contrast(1.04);transition:.6s var(--ease)}
+  object-position:var(--photo-x,50%) var(--photo-y,32%);
+  filter:saturate(.92) contrast(1.06);transform:scale(1.025);transition:.8s var(--ease)}
 .p-photo.broken{display:none}
-.p-portrait:hover .p-photo{filter:saturate(1) contrast(1.08)}
+.p-portrait:hover .p-photo{filter:saturate(1.03) contrast(1.08);transform:scale(1.055)}
 .p-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font:400 52px/1 var(--serif);color:rgba(168,137,79,.42);
   background:radial-gradient(circle at 50% 36%,rgba(168,137,79,.14),transparent 64%)}
@@ -770,13 +774,17 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .p-portrait.tier-A .p-badge{background:var(--jin);color:var(--ink)}
 .p-portrait.tier-B .p-badge{background:#443d36}
 .p-portrait.tier-S{box-shadow:0 0 0 1px rgba(184,59,43,.28)}
-.p-head-txt{flex:1;min-width:0}
-.p-name{font-size:44px}
+.p-head-txt{min-width:0;padding:18px 0}
+.p-name{font-size:clamp(44px,6vw,68px);line-height:1;letter-spacing:.2em}
 
 @media(max-width:760px){
-  .p-head{flex-direction:column;gap:20px}
-  .p-portrait{width:112px;height:146px}
+  .p-head{grid-template-columns:112px minmax(0,1fr);gap:22px;align-items:start}
+  .p-portrait{width:112px}
   .p-name{font-size:34px}
+}
+@media(max-width:440px){
+  .p-head{grid-template-columns:1fr;gap:20px}
+  .p-portrait{width:min(72vw,240px)}
 }
 
 
@@ -883,13 +891,16 @@ html.lenis,html.lenis body{height:auto}
    让「关系的交织」真正看得见：连线成网 / 分组着色 / 悬停聚焦 / 关系读解
    ================================================================== */
 
-/* ---------- 节点头像：回退为统一的群像裁切 ---------- */
+/* ---------- 节点头像：使用独立人物画，并围绕面部焦点裁切 ---------- */
 .rg-portrait,.rg-dossier-avatar{
   background-image:var(--portrait);
-  background-size:360% auto;
+  background-size:175% auto;
   background-position:var(--px) var(--py);
   background-repeat:no-repeat;
 }
+.rg-portrait{filter:saturate(.94) contrast(1.05)}
+.rg-node.selected .rg-node-caption::after{content:"再次点击 · 进入人物志";display:block;margin-top:4px;
+  color:var(--hud);font:7px/1.35 var(--sans);letter-spacing:.08em;white-space:nowrap}
 
 /* ---------- 画布：星图氛围（三处势力各自的光晕 + 细网格棋局） ---------- */
 .rg-canvas{
@@ -981,3 +992,228 @@ html.lenis,html.lenis body{height:auto}
 .sr-read-item:hover{border-color:var(--zhu);background:rgba(184,59,43,.08);transform:translateX(3px)}
 .sr-read-t{font-size:15px;color:var(--bo);letter-spacing:.04em}
 .sr-read-span{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--bo-faint)}
+
+/* ==================================================================
+   滚动层级 + 浮动人物档案（macOS 26 材质原则 × 汉代黑漆）
+   主页面＝铜轨；浮动档案＝冷青轨；工具/阅读容器＝暗金轨。
+   ================================================================== */
+
+/* 第一层：页面主滚动。轨道有实体底色，明确属于整个窗口。 */
+html{scrollbar-width:auto;scrollbar-color:rgba(168,137,79,.62) #080706}
+html::-webkit-scrollbar{width:12px;height:12px}
+html::-webkit-scrollbar-track{background:#080706;border-left:1px solid rgba(216,205,187,.055)}
+html::-webkit-scrollbar-thumb{min-height:54px;border:3px solid #080706;border-radius:99px;
+  background:linear-gradient(180deg,rgba(184,148,82,.78),rgba(118,89,48,.76));background-clip:padding-box}
+html::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#c3a368,#8e5c3d);background-clip:padding-box}
+
+/* 第二层：工具与阅读容器。比页面轨道更细、更弱，不争夺层级。 */
+.palette-list,.ct-tab-content{
+  scrollbar-width:thin;scrollbar-color:rgba(168,137,79,.48) transparent;scrollbar-gutter:stable}
+.palette-list::-webkit-scrollbar,.ct-tab-content::-webkit-scrollbar{width:8px}
+.palette-list::-webkit-scrollbar-track,.ct-tab-content::-webkit-scrollbar-track{background:transparent}
+.palette-list::-webkit-scrollbar-thumb,.ct-tab-content::-webkit-scrollbar-thumb{
+  border:2px solid transparent;border-radius:99px;background:rgba(168,137,79,.48);background-clip:padding-box}
+
+/* 横向工具轨只在容器确实溢出时出现，并与纵向主滚动分开。 */
+.chrono-scroll,.chrono-filters,.river-tools{
+  scrollbar-width:thin;scrollbar-color:rgba(168,137,79,.4) rgba(8,7,6,.38)}
+.chrono-scroll::-webkit-scrollbar,.chrono-filters::-webkit-scrollbar,.river-tools::-webkit-scrollbar{height:7px}
+.chrono-scroll::-webkit-scrollbar-track,.chrono-filters::-webkit-scrollbar-track,.river-tools::-webkit-scrollbar-track{
+  background:rgba(8,7,6,.38)}
+.chrono-scroll::-webkit-scrollbar-thumb,.chrono-filters::-webkit-scrollbar-thumb,.river-tools::-webkit-scrollbar-thumb{
+  border:2px solid transparent;border-radius:99px;background:rgba(168,137,79,.55);background-clip:padding-box}
+
+/* 关系画布是一层，人物档案是压在其上的另一层。 */
+.rg-layout{
+  position:relative;isolation:isolate;grid-template-columns:minmax(0,1fr) 430px;
+  overflow:hidden;background:
+    radial-gradient(circle at 82% 26%,rgba(111,154,163,.075),transparent 31%),
+    linear-gradient(135deg,#0b0908,#0d0b09 64%,#12100e)}
+.rg-canvas-scroll{position:relative;z-index:1;overflow:hidden}
+.rg-canvas-scroll::after{content:"";position:absolute;z-index:8;top:0;right:0;bottom:0;width:56px;
+  pointer-events:none;background:linear-gradient(90deg,transparent,rgba(8,7,6,.46))}
+
+/* 第三层：悬浮人物档案。厚玻璃材质只用一次，避免玻璃叠玻璃。 */
+.rg-dossier{
+  position:relative;z-index:20;align-self:start;
+  height:calc(clamp(650px,calc(100vh - 188px),790px) - 32px);
+  margin:16px 16px 16px -18px;padding:26px 24px 24px;
+  overflow-y:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable;
+  border:1px solid rgba(216,205,187,.22);border-radius:26px;
+  background:linear-gradient(145deg,rgba(34,29,25,.78),rgba(16,14,12,.7));
+  -webkit-backdrop-filter:blur(30px) saturate(145%);backdrop-filter:blur(30px) saturate(145%);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.62),
+    0 8px 24px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,245,224,.16),
+    inset 0 -1px 0 rgba(0,0,0,.34);
+  scrollbar-width:thin;scrollbar-color:rgba(111,154,163,.68) transparent}
+.rg-dossier::after{content:"";position:absolute;z-index:30;left:24px;right:24px;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(229,220,201,.38),transparent);pointer-events:none}
+.rg-dossier::-webkit-scrollbar{width:9px}
+.rg-dossier::-webkit-scrollbar-track{background:transparent;margin:18px 0}
+.rg-dossier::-webkit-scrollbar-thumb{border:3px solid transparent;border-radius:99px;
+  background:rgba(111,154,163,.68);background-clip:padding-box}
+.rg-dossier::-webkit-scrollbar-thumb:hover{background:rgba(139,184,191,.88);background-clip:padding-box}
+.rg-dossier:focus{outline:none}
+.rg-dossier:focus-visible{border-color:rgba(139,184,191,.7);
+  box-shadow:0 28px 70px rgba(0,0,0,.62),0 0 0 3px rgba(111,154,163,.2),inset 0 1px 0 rgba(255,245,224,.16)}
+
+/* 人物抬头停在卡片顶层；内容滚过其下方时才加深阴影。 */
+.rg-dossier-top{
+  position:sticky;top:-26px;z-index:6;margin:-26px -24px 0;padding:26px 24px 18px;
+  border-radius:25px 25px 0 0;
+  background:linear-gradient(180deg,rgba(31,27,23,.94),rgba(25,21,18,.82));
+  -webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%);
+  transition:box-shadow .28s var(--ease),border-color .28s var(--ease)}
+.rg-dossier.is-scrolled .rg-dossier-top{
+  box-shadow:0 16px 28px rgba(0,0,0,.34),0 1px 0 rgba(216,205,187,.11)}
+.rg-dossier .rg-tabs{position:relative;z-index:2}
+.rg-dossier .rg-relation-link,.rg-dossier .rg-open-person{border-radius:12px}
+.rg-dossier .rg-relation-link:active,.rg-dossier .rg-open-person:active{transform:scale(.985)}
+
+/* 关系画布横移属于底层：只在中小屏显示贴底的冷青轨。 */
+@media(max-width:1080px){
+  .rg-layout{display:grid;grid-template-columns:1fr;padding-bottom:16px;overflow:hidden}
+  .rg-canvas-scroll{overflow-x:auto;z-index:1;scrollbar-width:thin;
+    scrollbar-color:rgba(111,154,163,.56) rgba(8,7,6,.5)}
+  .rg-canvas-scroll::-webkit-scrollbar{display:block;width:auto;height:8px}
+  .rg-canvas-scroll::-webkit-scrollbar-track{background:rgba(8,7,6,.5)}
+  .rg-canvas-scroll::-webkit-scrollbar-thumb{border:2px solid transparent;border-radius:99px;
+    background:rgba(111,154,163,.58);background-clip:padding-box}
+  .rg-canvas-scroll::after{display:none}
+  .rg-dossier{
+    height:auto;max-height:none;margin:-18px 16px 0;padding:26px 24px 24px;
+    overflow:visible;overscroll-behavior:auto;scrollbar-gutter:auto;border-radius:26px}
+  .rg-dossier-top{position:relative;top:auto;margin:-26px -24px 0}
+}
+@media(max-width:700px){
+  .rg-layout{padding-bottom:10px}
+  .rg-dossier{margin:-12px 8px 0;padding:22px 18px 22px;border-radius:22px}
+  .rg-dossier-top{margin:-22px -18px 0;padding:22px 18px 16px;border-radius:21px 21px 0 0}
+}
+
+@media(prefers-reduced-transparency:reduce){
+  .rg-dossier,.rg-dossier-top{background:#181411;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media(prefers-contrast:more){
+  .rg-dossier{background:rgba(13,11,10,.98);border-color:rgba(216,205,187,.6)}
+}
+
+/* ==================================================================
+   人物 × 讲坛 × 史料：连续证据阅读
+   冷青＝人物视角，朱＝讲坛判断，暗金＝一手史料。
+   ================================================================== */
+.evidence-kicker{display:flex;align-items:center;gap:10px;margin-bottom:15px;
+  font:10px/1.4 var(--mono);letter-spacing:.13em;color:var(--bo-faint)}
+.evidence-kicker span:first-child{color:var(--hud)}
+.evidence-kicker span:last-child{color:var(--jin)}
+.evidence-kicker i{font-style:normal;color:var(--zhu)}
+.evidence-intro{margin:-4px 0 18px;color:var(--bo-faint);font:12px/1.9 var(--sans)}
+.evidence-empty{color:var(--bo-faint);font-size:12px;line-height:1.8}
+
+/* 人物页：一集一格的证据工作台 */
+.evidence-workbench{padding:24px;border:1px solid rgba(111,154,163,.26);border-radius:22px;
+  background:linear-gradient(145deg,rgba(111,154,163,.055),rgba(168,137,79,.035));
+  box-shadow:inset 0 1px rgba(255,255,255,.035)}
+.person-evidence-nav{display:flex;gap:8px;overflow-x:auto;padding:1px 1px 10px;margin-bottom:14px;
+  scrollbar-width:thin;scrollbar-color:rgba(111,154,163,.48) transparent}
+.person-evidence-nav button{flex:none;display:grid;grid-template-columns:29px auto;align-items:center;gap:8px;
+  padding:8px 11px 8px 8px;border:1px solid var(--line);border-radius:12px;text-align:left;
+  color:var(--bo-faint);transition:.28s var(--ease)}
+.person-evidence-nav button b{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;
+  background:rgba(216,205,187,.04);font:10px/1 var(--mono);font-weight:400;color:var(--jin)}
+.person-evidence-nav button span{font-size:12px;white-space:nowrap}
+.person-evidence-nav button:hover,.person-evidence-nav button.on{color:var(--bo);border-color:rgba(111,154,163,.56);background:rgba(111,154,163,.09)}
+.person-evidence-panel{display:none;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:18px}
+.person-evidence-panel.on{display:grid}
+.person-evidence-panel>div>h3{margin:0 0 10px;font:11px/1.5 var(--sans);font-weight:400;letter-spacing:.15em;color:var(--hud)}
+.pe-judgments article{padding:12px 0;border-top:1px solid var(--line)}
+.pe-judgments article:first-of-type{border-top:0;padding-top:0}
+.pe-judgments b{font-size:14px;font-weight:400;color:var(--bo)}
+.pe-judgments p{margin:5px 0;color:var(--bo-dim);font-size:12.5px;line-height:1.85}
+.pe-judgments small{color:var(--zhu);font-size:10px;line-height:1.65}
+.pe-open-lecture{grid-column:1/-1;justify-self:end;color:var(--jin);font:10px/1.5 var(--sans);letter-spacing:.12em;padding:8px 0}
+.pe-open-lecture:hover{color:#dec18e}
+
+/* 可复用史料证据卡 */
+.ev-source-card{border:1px solid rgba(168,137,79,.22);border-radius:16px;margin:0 0 11px;overflow:hidden;
+  background:rgba(9,8,7,.38);transition:border-color .28s var(--ease),transform .28s var(--ease)}
+.ev-source-card:hover{border-color:rgba(168,137,79,.48);transform:translateY(-2px)}
+.ev-source-card header{display:flex;align-items:center;gap:9px;padding:10px 13px;border-bottom:1px solid var(--line);
+  font:9px/1.4 var(--sans);letter-spacing:.12em}
+.ev-source-card header span{color:var(--jin)}
+.ev-source-card header b{font-weight:400;color:var(--bo-faint)}
+.ev-source-card blockquote{margin:0;padding:15px 15px 13px;color:var(--bo);font-size:15px;line-height:1.9;
+  border-left:2px solid var(--jin);background:rgba(168,137,79,.035)}
+.ev-translation,.ev-interpret{display:grid;grid-template-columns:94px 1fr;gap:10px;padding:11px 14px;border-top:1px solid var(--line)}
+.ev-translation em,.ev-interpret em{font:9px/1.7 var(--sans);font-style:normal;letter-spacing:.1em;color:var(--jin)}
+.ev-interpret em{color:var(--zhu)}
+.ev-translation p,.ev-interpret p{margin:0;color:var(--bo-dim);font-size:12px;line-height:1.8}
+.ev-source-people{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 10px}
+.ev-source-people button,.ev-source-card footer button{font:9px/1.4 var(--sans);letter-spacing:.08em;color:var(--hud)}
+.ev-source-card footer{display:flex;align-items:center;flex-wrap:wrap;gap:13px;padding:9px 14px;border-top:1px solid var(--line)}
+.ev-source-card footer button:last-of-type{margin-left:auto;color:var(--jin)}
+.ev-source-card footer span{font:9px/1.4 var(--sans);color:var(--bo-faint)}
+
+/* 讲坛：人物透镜会同时过滤观点和史料卡 */
+.lecture-lens{margin:28px 0;padding:20px;border:1px solid rgba(111,154,163,.25);border-radius:20px;
+  background:radial-gradient(circle at 12% 0,rgba(111,154,163,.09),transparent 44%)}
+.lecture-lens h2{margin:0;font-size:19px;font-weight:400;letter-spacing:.08em}
+.lecture-lens>p{margin:5px 0 14px;color:var(--bo-faint);font:12px/1.8 var(--sans)}
+.lecture-lens-people{display:flex;flex-wrap:wrap;gap:7px}
+.lecture-lens-people button{display:flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;
+  color:var(--bo-faint);font:10px/1.4 var(--sans);transition:.25s var(--ease)}
+.lecture-lens-people button span{width:24px;height:24px;border-radius:50%;background-image:var(--portrait);
+  background-size:175% auto;background-position:var(--px) var(--py);border:1px solid rgba(111,154,163,.45)}
+.lecture-lens-people button:hover,.lecture-lens-people button.on{color:var(--bo);border-color:var(--hud);background:rgba(111,154,163,.1)}
+.lecture-lens-status{margin-top:12px;color:var(--hud);font:9px/1.5 var(--mono);letter-spacing:.1em}
+.lecture-source-evidence>.ev-source-card{margin-bottom:14px}
+.evidence-hidden{display:none!important}
+
+/* 史料阅读：三种模式共用同一份原文，不重复制造页面。 */
+.sr-explained{color:var(--jin)}
+.sr-reading-console{margin:22px 0 30px;padding:20px 22px;border:1px solid rgba(168,137,79,.28);border-radius:20px;
+  background:linear-gradient(145deg,rgba(168,137,79,.07),rgba(111,154,163,.035))}
+.sr-reading-stats{display:flex;align-items:baseline;gap:9px;margin-bottom:15px}
+.sr-reading-stats b{font:24px/1 var(--mono);font-weight:400;color:var(--jin)}
+.sr-reading-stats span{margin-right:17px;color:var(--bo-faint);font:9px/1.4 var(--sans);letter-spacing:.12em}
+.sr-mode-switch{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);width:max-content;max-width:100%;border-radius:11px;overflow:hidden}
+.sr-mode-switch button{padding:8px 13px;border-right:1px solid var(--line);color:var(--bo-faint);font:10px/1.4 var(--sans);letter-spacing:.08em}
+.sr-mode-switch button:last-child{border-right:0}
+.sr-mode-switch button.on{color:#f1e4cd;background:rgba(168,137,79,.16)}
+.sr-mode-status{margin:10px 0 0;color:var(--bo-faint);font:10px/1.6 var(--sans)}
+.sr-evidence-people{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.sr-evidence-people span{margin-right:5px;color:var(--bo-faint);font:9px/1.4 var(--sans)}
+.sr-evidence-people button{padding:3px 7px;border:1px solid rgba(111,154,163,.28);border-radius:99px;color:var(--hud);font-size:10px}
+.sr-passage{display:grid;grid-template-columns:46px minmax(0,1fr);gap:0 16px;padding:20px 0;border-top:1px solid var(--line)}
+.sr-passage:first-child{border-top:0}
+.sr-passage-no{grid-row:1/3;padding-top:5px;color:var(--bo-faint);font:9px/1.5 var(--mono);letter-spacing:.08em}
+.sr-passage-no span{display:block;width:min-content;margin-top:8px;color:var(--jin);font:8px/1.4 var(--sans);white-space:nowrap;writing-mode:vertical-rl;letter-spacing:.16em}
+.sr-passage .sr-para{grid-column:2;margin:0!important;text-indent:0!important;font-size:16px;line-height:2.08}
+.sr-passage.has-evidence{margin:0 -18px;padding:22px 18px;border:1px solid rgba(168,137,79,.2);border-radius:18px;
+  background:rgba(168,137,79,.035)}
+.sr-assist{grid-column:2;display:grid;grid-template-columns:1fr 1fr;margin-top:17px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.sr-assist-col{padding:14px 15px}
+.sr-assist-col+.sr-assist-col{border-left:1px solid var(--line)}
+.sr-assist-col em{font:9px/1.5 var(--sans);font-style:normal;letter-spacing:.12em;color:var(--jin)}
+.sr-assist-col.interpretation em{color:var(--zhu)}
+.sr-assist-col p{margin:6px 0 0;color:var(--bo-dim);font-size:12.5px;line-height:1.85}
+.sr-assist footer{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:9px;padding:9px 14px;border-top:1px solid var(--line)}
+.sr-assist footer button{color:var(--hud);font:9px/1.5 var(--sans);letter-spacing:.06em}
+.mode-original .sr-assist{display:none}
+.mode-evidence .sr-passage:not(.has-evidence){display:none}
+
+@media(max-width:720px){
+  .evidence-workbench{padding:18px 15px;border-radius:18px}
+  .person-evidence-panel.on{grid-template-columns:1fr}
+  .pe-open-lecture{grid-column:1}
+  .ev-translation,.ev-interpret{grid-template-columns:1fr;gap:4px}
+  .lecture-lens{padding:17px 14px}
+  .sr-reading-console{padding:17px 14px}
+  .sr-passage{grid-template-columns:32px minmax(0,1fr);gap:0 9px}
+  .sr-passage.has-evidence{margin:0 -8px;padding:17px 8px}
+  .sr-assist{grid-template-columns:1fr}
+  .sr-assist-col+.sr-assist-col{border-left:0;border-top:1px solid var(--line)}
+  .sr-mode-switch{width:100%}.sr-mode-switch button{flex:1;padding:8px 5px;white-space:nowrap}
+}
