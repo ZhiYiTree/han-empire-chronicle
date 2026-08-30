@@ -165,6 +165,26 @@ let personFail = 0;
 ].forEach(([ok, message]) => { if (!ok) { personFail++; console.log("  ✗", message); } });
 console.log(`人物页头像｜${personFail === 0 ? "通过" : "失败 " + personFail + " 项"}`);
 
+// 关系网结构回归：节点、连线、data-a/data-b（悬停聚焦依赖这两个属性）
+global.location.hash = "#/relations";
+fire.forEach(f => f());
+const relHtml = getEl("app").innerHTML;
+const nodeCount = (relHtml.match(/data-graph-person="/g) || []).length;
+// 注意：SVG 容器是 class="rg-lines"，用 lookahead 排除，否则会多数一条
+const lineCount = (relHtml.match(/class="rg-line(?=[\s"])/g) || []).length;
+const secondary = (relHtml.match(/class="rg-line secondary/g) || []).length;
+const withData = (relHtml.match(/data-a="[^"]+" data-b="[^"]+"/g) || []).length;
+let relFail = 0;
+[
+  [nodeCount === 16, `关系网节点数应为 16，实际 ${nodeCount}`],
+  [secondary === 10, `横向关系连线应为 10 条，实际 ${secondary}`],
+  [lineCount === (nodeCount - 1) + secondary,
+    `连线总数应为主线 ${nodeCount - 1} + 横向 ${secondary}，实际 ${lineCount}`],
+  [withData === lineCount, `有 ${lineCount - withData} 条连线缺 data-a/data-b，悬停聚焦会失效`],
+  [relHtml.includes('class="rg-hint"'), "缺少关系说明条"]
+].forEach(([ok, message]) => { if (!ok) { relFail++; console.log("  ✗", message); } });
+console.log(`关系网结构｜${relFail === 0 ? "通过" : "失败 " + relFail + " 项"}`);
+
 // 数据完整性检查
 let warn = 0;
 function duplicateValues(rows, key) {
@@ -215,5 +235,5 @@ D.relations.forEach(r => {
 const S = D.events.filter(e => e.importance === "S").length;
 const withShiji = D.events.filter(e => (e.shiji || []).length).length;
 console.log(`S 级事件 ${S}｜含史书原文的 event ${withShiji}｜数据告警 ${warn}`);
-console.log(fail === 0 && warn === 0 && paletteFail === 0 && timelineFail === 0 && personFail === 0 ? "\n✔ 冒烟通过" : "\n⚠ 存在问题，见上");
-if (fail || warn || paletteFail || timelineFail || personFail) process.exit(1);
+console.log(fail === 0 && warn === 0 && paletteFail === 0 && timelineFail === 0 && personFail === 0 && relFail === 0 ? "\n✔ 冒烟通过" : "\n⚠ 存在问题，见上");
+if (fail || warn || paletteFail || timelineFail || personFail || relFail) process.exit(1);

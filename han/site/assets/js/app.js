@@ -575,9 +575,7 @@
 
   function graphAvatarStyle(name) {
     var a = GRAPH_AVATARS[name] || GRAPH_AVATARS["刘邦"];
-    // 真实照片优先；CSS 用多层背景，照片缺失时该层不绘制，自动露出下层群像裁切
-    return "--photo:url('../img/people/" + encodeURIComponent(name) + ".jpg');" +
-      "--portrait:url('../img/people/" + a[0] + "');--px:" + a[1] + ";--py:" + a[2];
+    return "--portrait:url('../img/people/" + a[0] + "');--px:" + a[1] + ";--py:" + a[2];
   }
   var GRAPH_NODES = [
     { name: "刘邦", x: 49, y: 51, kind: "center" },
@@ -597,6 +595,20 @@
     { name: "刘盈", x: 90, y: 61, kind: "kin" },
     { name: "戚夫人", x: 86, y: 82, kind: "kin" }
   ];
+
+  /* 横向关系的实质说明——悬停节点时展示，让连线不只是装饰 */
+  var GRAPH_EDGE_NOTES = {
+    "萧何|韩信": "月下追韩信，成也萧何",
+    "曹参|韩信": "曾隶韩信麾下，随其破齐",
+    "陈平|韩信": "献伪游云梦之计，擒韩信于陈",
+    "项羽|范增": "尊为亚父，终被反间计疏远",
+    "黥布|项羽": "原为楚将，后叛楚归汉",
+    "项羽|韩信": "垓下决战，楚汉终局",
+    "吕后|韩信": "与萧何定计，诛韩信于长乐宫钟室",
+    "吕后|戚夫人": "夺储之争，终成人彘之祸",
+    "吕后|刘盈": "母子，刘盈即后来的汉惠帝",
+    "樊哙|吕后": "娶吕后之妹吕媭，与刘邦为连襟"
+  };
 
   function viewRelations() {
     var selected = personByName(graphSelected) || personByName("韩信") || PERSONS[0];
@@ -619,18 +631,25 @@
 
     GRAPH_NODES.slice(1).forEach(function (n) {
       var active = n.name === selected.name || selected.name === "刘邦";
-      h += '<line class="rg-line ' + esc(n.kind) + (active ? " active" : "") + '" x1="' + center.x + '" y1="' + center.y +
-        '" x2="' + n.x + '" y2="' + n.y + '"></line>';
+      h += '<line class="rg-line ' + esc(n.kind) + (active ? " active" : "") + '" data-a="刘邦" data-b="' + esc(n.name) +
+        '" x1="' + center.x + '" y1="' + center.y + '" x2="' + n.x + '" y2="' + n.y + '"></line>';
     });
+    /* 节点之间的横向关系——「关系交织」的主角。
+       全部取自史事：萧何追韩信 / 曹参曾隶韩信 / 陈平献计擒韩信 /
+       项羽与范增、与黥布的旧属关系 / 垓下对手 / 吕后诛韩信、与戚夫人夺储、
+       吕后刘盈母子、樊哙娶吕后之妹。 */
     [
-      ["萧何", "韩信", "ally"], ["项羽", "韩信", "rival"], ["项羽", "范增", "rival"],
-      ["吕后", "韩信", "kin"], ["吕后", "戚夫人", "kin"], ["吕后", "刘盈", "kin"]
+      ["萧何", "韩信", "ally"], ["曹参", "韩信", "ally"], ["陈平", "韩信", "ally"],
+      ["项羽", "范增", "rival"], ["黥布", "项羽", "rival"], ["项羽", "韩信", "rival"],
+      ["吕后", "韩信", "kin"], ["吕后", "戚夫人", "kin"], ["吕后", "刘盈", "kin"],
+      ["樊哙", "吕后", "kin"]
     ].forEach(function (edge) {
       var a = GRAPH_NODES.find(function (n) { return n.name === edge[0]; });
       var b = GRAPH_NODES.find(function (n) { return n.name === edge[1]; });
+      if (!a || !b) return;
       var active = edge[0] === selected.name || edge[1] === selected.name;
-      h += '<line class="rg-line secondary ' + edge[2] + (active ? " active" : "") + '" x1="' + a.x + '" y1="' + a.y +
-        '" x2="' + b.x + '" y2="' + b.y + '"></line>';
+      h += '<line class="rg-line secondary ' + edge[2] + (active ? " active" : "") + '" data-a="' + esc(edge[0]) +
+        '" data-b="' + esc(edge[1]) + '" x1="' + a.x + '" y1="' + a.y + '" x2="' + b.x + '" y2="' + b.y + '"></line>';
     });
     h += "</svg>";
 
@@ -697,6 +716,51 @@
         if (p) go("#/person/" + encodeURIComponent(p.id));
       });
     });
+
+    /* 悬停聚焦：高亮该人物的全部关系连线与相关节点，其余淡出。
+       这是关系网最核心的探索交互——一眼看清「谁和谁有瓜葛」。 */
+    var nodes = atlas.querySelectorAll(".rg-node");
+    var lines = atlas.querySelectorAll(".rg-line");
+    function focusGraph(name) {
+      var related = {};
+      var notes = [];
+      atlas.classList.toggle("rg-focusing", !!name);
+      if (name) {
+        related[name] = true;
+        lines.forEach(function (l) {
+          var a = l.getAttribute("data-a"), b = l.getAttribute("data-b");
+          if (a === name || b === name) {
+            l.classList.add("hot"); l.classList.remove("dim");
+            related[a] = true; related[b] = true;
+            var note = GRAPH_EDGE_NOTES[a + "|" + b] || GRAPH_EDGE_NOTES[b + "|" + a];
+            if (note) notes.push("<b>" + esc(a === name ? b : a) + "</b>　" + esc(note));
+          } else { l.classList.add("dim"); l.classList.remove("hot"); }
+        });
+      } else {
+        lines.forEach(function (l) { l.classList.remove("hot"); l.classList.remove("dim"); });
+      }
+      nodes.forEach(function (n) {
+        var nm = n.getAttribute("data-graph-person");
+        if (name) {
+          n.classList.toggle("hot", !!related[nm]);
+          n.classList.toggle("dim", !related[nm]);
+        } else {
+          n.classList.remove("hot"); n.classList.remove("dim");
+        }
+      });
+      /* 把关系的实质读出来，而不只是亮几条线 */
+      var hint = atlas.querySelector(".rg-hint");
+      if (hint) {
+        hint.innerHTML = notes.length
+          ? notes.join("　·　")
+          : (name ? "该人物暂未收录横向关系说明" : "悬停查看关系　·　单击选择人物　·　双击进入完整档案");
+      }
+    }
+    nodes.forEach(function (n) {
+      n.addEventListener("mouseenter", function () { focusGraph(n.getAttribute("data-graph-person")); });
+      n.addEventListener("mouseleave", function () { focusGraph(null); });
+    });
+
     setupGraphMotion(atlas);
   }
 
@@ -705,7 +769,7 @@
       var portraits = root.querySelectorAll(".rg-portrait"), lines = root.querySelectorAll(".rg-line");
       gsap.from(portraits, { scale: .45, autoAlpha: 0, duration: .72, stagger: { amount: .75, from: "center" }, ease: "back.out(1.8)" });
       gsap.from(lines, { strokeDasharray: 120, strokeDashoffset: 120, duration: 1.2, stagger: .025, ease: "power2.out" });
-      gsap.to(root.querySelectorAll(".rg-line.secondary"), { strokeDashoffset: -18, duration: 4.5, repeat: -1, ease: "none" });
+      gsap.to(root.querySelectorAll(".rg-line.secondary"), { strokeDashoffset: -28, duration: 3.4, repeat: -1, ease: "none" });
       gsap.from(root.querySelector(".rg-dossier"), { x: 24, autoAlpha: 0, duration: .65, ease: "power2.out" });
       var selected = root.querySelector(".rg-node.selected .rg-portrait");
       if (selected) gsap.to(selected, { scale: 1.055, duration: 1.45, repeat: -1, yoyo: true, ease: "sine.inOut" });
