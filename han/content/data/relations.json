@@ -1,0 +1,745 @@
+[
+ {
+  "id": "rel-liubang-hanxin",
+  "a": "刘邦",
+  "b": "韩信",
+  "summary": "从登坛拜将到钟室之祸：中国历史上最典型的「大用大疑」。",
+  "phases": [
+   {
+    "year": -206,
+    "title": "初见·未奇",
+    "type": "初识",
+    "desc": "韩信自楚归汉，仅任连敖、治粟都尉，未被刘邦看重。",
+    "events": [
+     "ev-feng-hanwang"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "萧何追回",
+    "type": "荐举",
+    "desc": "韩信亡去，萧何月下追回，力荐于刘邦。",
+    "events": [
+     "ev-chase-hanxin"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "登坛拜将",
+    "type": "重用",
+    "desc": "刘邦择日斋戒设坛，拜韩信为大将，全军皆惊。",
+    "events": [
+     "ev-appoint-general"
+    ]
+   },
+   {
+    "year": -205,
+    "title": "军事倚重",
+    "type": "依赖",
+    "desc": "还定三秦、破魏破赵降燕、破齐，刘邦的北方战线几乎全交韩信。",
+    "events": [
+     "ev-huan-ding-sanqin",
+     "ev-hanxin-beifa",
+     "ev-hanxin-qi"
+    ]
+   },
+   {
+    "year": -203,
+    "title": "齐王之请",
+    "type": "嫌隙",
+    "desc": "韩信请为「假王」，刘邦怒而止于张良、陈平之谏，终封齐王——裂痕已生。",
+    "events": [
+     "ev-qiwang"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "垓下之后徙楚王",
+    "type": "收权",
+    "desc": "垓下战后刘邦即驰入韩信军收其兵，徙封楚王。",
+    "events": [
+     "ev-gaxia"
+    ]
+   },
+   {
+    "year": -201,
+    "title": "降为淮阴侯",
+    "type": "削权",
+    "desc": "有人告其谋反，刘邦伪游云梦擒之，降为淮阴侯，居长安而不得之国。",
+    "events": [
+     "ev-luwan-hanxin"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "钟室之祸",
+    "type": "终结",
+    "desc": "陈豨叛，韩信称病不从；吕后与萧何设计，斩于长乐宫钟室。",
+    "events": [
+     "ev-hanxin-die",
+     "ev-chenxi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-xiangyu",
+  "a": "刘邦",
+  "b": "项羽",
+  "summary": "从并肩反秦到楚汉对峙，七年之内由盟友转为死敌。",
+  "phases": [
+   {
+    "year": -208,
+    "title": "同列楚军",
+    "type": "同盟",
+    "desc": "项梁立楚怀王，刘邦归项梁麾下，与项羽同为楚将。",
+    "events": [
+     "ev-join-xiangliang"
+    ]
+   },
+   {
+    "year": -208,
+    "title": "怀王之约",
+    "type": "竞争",
+    "desc": "约定「先入定关中者王之」，二人分兵西进与北上救赵。",
+    "events": [
+     "ev-huaiwang-yue"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "鸿门宴",
+    "type": "危机",
+    "desc": "刘邦先入关中又封函谷关，项羽欲击之，鸿门宴成为生死关。",
+    "events": [
+     "ev-block-hangu",
+     "ev-hongmen"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "分封与屈就",
+    "type": "压制",
+    "desc": "项羽分封天下，改封刘邦为汉王，王巴蜀汉中。",
+    "events": [
+     "ev-feng-hanwang"
+    ]
+   },
+   {
+    "year": -205,
+    "title": "彭城与荥阳",
+    "type": "战争",
+    "desc": "彭城大败，此后五年荥阳、成皋拉锯，屡败屡战。",
+    "events": [
+     "ev-pengcheng",
+     "ev-xingyang"
+    ]
+   },
+   {
+    "year": -203,
+    "title": "鸿沟议和",
+    "type": "暂和",
+    "desc": "中分天下，既而刘邦负约追击。",
+    "events": [
+     "ev-honggou"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "垓下与乌江",
+    "type": "终结",
+    "desc": "合围垓下，项羽自刎乌江。",
+    "events": [
+     "ev-gaxia",
+     "ev-xiangyu-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-xiaohe",
+  "a": "刘邦",
+  "b": "萧何",
+  "summary": "「大用小疑」：最可靠的后方，也三次被猜忌。",
+  "phases": [
+   {
+    "year": -209,
+    "title": "沛县同起",
+    "type": "故旧",
+    "desc": "萧何为沛县主吏掾，与刘邦相善，共举沛县起兵。",
+    "events": [
+     "ev-peixian"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "追韩信",
+    "type": "倚重",
+    "desc": "萧何追回韩信，促成拜将；此后镇关中、给馈饷。",
+    "events": [
+     "ev-chase-hanxin"
+    ]
+   },
+   {
+    "year": -201,
+    "title": "功臣第一",
+    "type": "荣宠",
+    "desc": "刘邦定萧何位次第一，赐剑履上殿。",
+    "events": [
+     "ev-xiaohe-first"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "三次受疑",
+    "type": "猜忌",
+    "desc": "汉十一年前后屡遭猜忌，汉十二年请开放上林苑触怒，被下狱械系。",
+    "events": [
+     "ev-xiaohe-jail"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "相国至终",
+    "type": "复位",
+    "desc": "王卫尉进言后被赦，刘邦临终仍以其为相国安排后事。",
+    "events": []
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-zhangliang",
+  "a": "刘邦",
+  "b": "张良",
+  "summary": "「大用不疑」：谋而不居功，是唯一几乎未被猜忌的核心人物。",
+  "phases": [
+   {
+    "year": -208,
+    "title": "道遇归汉",
+    "type": "相遇",
+    "desc": "张良率众归刘邦，刘邦任其为厩将，言听计从。",
+    "events": [
+     "ev-west-pass"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "鸿门前后",
+    "type": "定策",
+    "desc": "结项伯、谏入秦宫、鸿门护主，多赖张良。",
+    "events": [
+     "ev-hongmen"
+    ]
+   },
+   {
+    "year": -205,
+    "title": "下邑画策",
+    "type": "战略",
+    "desc": "提出以韩信、彭越、黥布三方并力破楚的总体规划。",
+    "events": [
+     "ev-xiayi"
+    ]
+   },
+   {
+    "year": -201,
+    "title": "自请留侯",
+    "type": "退身",
+    "desc": "辞三万户，请封于留，渐退于权力中心。",
+    "events": [
+     "ev-zhangliang-feng"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "护太子",
+    "type": "定储",
+    "desc": "献计请商山四皓，稳固刘盈太子之位。",
+    "events": [
+     "ev-duochu"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-lvhou",
+  "a": "刘邦",
+  "b": "吕后",
+  "summary": "从结发到共治，王立群称刘邦「看懂男人而看不懂女人」。",
+  "phases": [
+   {
+    "year": null,
+    "title": "结发",
+    "type": "婚姻",
+    "desc": "吕公相面而嫁女，吕雉为刘邦生刘盈、鲁元公主。",
+    "events": [
+     "ev-lv-marriage"
+    ]
+   },
+   {
+    "year": null,
+    "title": "望气寻夫",
+    "type": "传奇",
+    "desc": "传说吕后能凭云气找到芒砀山中的刘邦——王立群认为不可信。",
+    "events": [
+     "ev-mangdang"
+    ]
+   },
+   {
+    "year": -205,
+    "title": "彭城被俘",
+    "type": "共患难",
+    "desc": "彭城败后吕后与太公为项羽所执，羁押二年余。",
+    "events": [
+     "ev-pengcheng"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "诛韩信",
+    "type": "共谋",
+    "desc": "韩信之死由吕后与萧何定计执行，刘邦归而「且喜且怜」。",
+    "events": [
+     "ev-hanxin-die"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "身后之局",
+    "type": "托付",
+    "desc": "刘邦临终定相国次序，吕后自此掌汉初朝政。",
+    "events": [
+     "ev-liubang-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-fankuai",
+  "a": "刘邦",
+  "b": "樊哙",
+  "summary": "连襟与猛将，鸿门护主，晚年几被刘邦所杀。",
+  "phases": [
+   {
+    "year": -209,
+    "title": "沛县从起",
+    "type": "故旧",
+    "desc": "樊哙以屠狗为业，随刘邦起兵，娶吕后之妹。",
+    "events": [
+     "ev-peixian"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "鸿门闯帐",
+    "type": "护主",
+    "desc": "带剑拥盾入军门，慷慨陈词，助刘邦脱身。",
+    "events": [
+     "ev-hongmen"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "还定三秦",
+    "type": "征战",
+    "desc": "屡为先登，赐爵列侯。",
+    "events": [
+     "ev-huan-ding-sanqin"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "几遭诛杀",
+    "type": "猜忌",
+    "desc": "樊哙以相国将兵讨燕，刘邦病中听谗命陈平、周勃即军中斩之，因刘邦崩而未果。",
+    "events": []
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-chenping",
+  "a": "刘邦",
+  "b": "陈平",
+  "summary": "「不计易主」的代表：三易其主而终受重用。",
+  "phases": [
+   {
+    "year": -205,
+    "title": "自楚归汉",
+    "type": "归附",
+    "desc": "陈平由项羽部下投刘邦，被任为都尉，诸将譁然。",
+    "events": []
+   },
+   {
+    "year": -204,
+    "title": "反间范增",
+    "type": "奇计",
+    "desc": "以黄金行反间，项羽疑范增，范增愤而归乡道死。",
+    "events": [
+     "ev-xingyang"
+    ]
+   },
+   {
+    "year": -203,
+    "title": "蹑足封齐",
+    "type": "定策",
+    "desc": "与张良同在榻旁蹑刘邦足，劝立韩信为齐王。",
+    "events": [
+     "ev-qiwang"
+    ]
+   },
+   {
+    "year": -200,
+    "title": "白登解围",
+    "type": "奇计",
+    "desc": "白登被围七日，传说用陈平秘计得脱，其法史称「秘而不宣」。",
+    "events": [
+     "ev-baideng"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "奉命斩哙",
+    "type": "执行",
+    "desc": "与周勃同受命斩樊哙，见刘邦已崩而自免。",
+    "events": []
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-pengyue",
+  "a": "刘邦",
+  "b": "彭越",
+  "summary": "联盟者而终被诛：游击断粮道之功与「反乎冤乎」之问。",
+  "phases": [
+   {
+    "year": -205,
+    "title": "结盟",
+    "type": "联盟",
+    "desc": "彭越以独立武装归汉，受封魏相国，专事断楚粮道。",
+    "events": [
+     "ev-xiayi"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "垓下会师",
+    "type": "合围",
+    "desc": "彭越、韩信如期不至，张良建议许以封地，遂会垓下。",
+    "events": [
+     "ev-gaxia"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "封梁王",
+    "type": "封赏",
+    "desc": "汉五年封为梁王，都定陶。",
+    "events": [
+     "ev-fenfeng-yixing"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "醢刑",
+    "type": "终结",
+    "desc": "以谋反罪被捕，赦为庶人徙蜀，吕后劝刘邦杀之，遂被醢。",
+    "events": [
+     "ev-pengyue-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-qingbu",
+  "a": "刘邦",
+  "b": "黥布",
+  "summary": "由楚将而汉王，由功臣而叛臣。",
+  "phases": [
+   {
+    "year": null,
+    "title": "楚之九江王",
+    "type": "敌对阵营",
+    "desc": "黥布为项羽封九江王，与项氏有隙。",
+    "events": []
+   },
+   {
+    "year": -203,
+    "title": "随何策反",
+    "type": "归汉",
+    "desc": "随何说黥布叛楚归汉，刘邦初见时倨傲而后厚遇。",
+    "events": [
+     "ev-xiayi"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "封淮南王",
+    "type": "封赏",
+    "desc": "垓下之后封淮南王。",
+    "events": [
+     "ev-fenfeng-yixing"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "反叛",
+    "type": "终结",
+    "desc": "韩信、彭越相继被诛，黥布惧而起兵，刘邦亲征，黥布败死。",
+    "events": [
+     "ev-qingbu-fan"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-luwan",
+  "a": "刘邦",
+  "b": "卢绾",
+  "summary": "最亲密的故人，最彻底的背叛——卢绾是刘邦信任体系崩塌的终点。",
+  "phases": [
+   {
+    "year": null,
+    "title": "同里同日生",
+    "type": "故旧",
+    "desc": "卢绾与刘邦同里、同日生，两家相善，自幼相亲。",
+    "events": [
+     "ev-peixian"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "汉中为太尉",
+    "type": "亲信",
+    "desc": "入汉中为将军，常侍中，出入卧内，他人莫能比。",
+    "events": [
+     "ev-feng-hanwang"
+    ]
+   },
+   {
+    "year": -202,
+    "title": "封燕王",
+    "type": "封赏",
+    "desc": "臧荼反诛之后，卢绾被封燕王，群臣皆知其受宠。",
+    "events": [
+     "ev-luwan-hanxin"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "疑惧入胡",
+    "type": "背叛",
+    "desc": "陈豨事连及卢绾，刘邦召之不来，卢绾惧而亡入匈奴。",
+    "events": [
+     "ev-luwan-fan"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-xiaohe-hanxin",
+  "a": "萧何",
+  "b": "韩信",
+  "summary": "「成也萧何，败也萧何」——荐才者与执行者。",
+  "phases": [
+   {
+    "year": -206,
+    "title": "月下追信",
+    "type": "知遇",
+    "desc": "萧何独具慧眼，追回亡去的韩信并力荐。",
+    "events": [
+     "ev-chase-hanxin"
+    ]
+   },
+   {
+    "year": -206,
+    "title": "促成拜将",
+    "type": "推举",
+    "desc": "萧何力劝刘邦设坛拜将，韩信由此登台。",
+    "events": [
+     "ev-appoint-general"
+    ]
+   },
+   {
+    "year": -196,
+    "title": "诳入钟室",
+    "type": "终结",
+    "desc": "吕后欲诛韩信，萧何设计诳其入长乐宫，遂被杀。",
+    "events": [
+     "ev-hanxin-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-xiangyu-hanxin",
+  "a": "项羽",
+  "b": "韩信",
+  "summary": "执戟郎中的起点：项羽不用韩信，是用人史上最大的一次失手。",
+  "phases": [
+   {
+    "year": null,
+    "title": "执戟郎中",
+    "type": "未用",
+    "desc": "韩信在项羽麾下为郎中，数以策干项羽，羽不用。",
+    "events": []
+   },
+   {
+    "year": -206,
+    "title": "亡楚归汉",
+    "type": "转投",
+    "desc": "韩信亡楚归汉，最终成为击败项羽的军事主力。",
+    "events": [
+     "ev-chase-hanxin"
+    ]
+   },
+   {
+    "year": -205,
+    "title": "武涉游说",
+    "type": "拉拢",
+    "desc": "项羽遣武涉说韩信反汉与楚三分天下，韩信不听。",
+    "events": []
+   },
+   {
+    "year": -202,
+    "title": "垓下合围",
+    "type": "对决",
+    "desc": "韩信将三十万军当之，十面埋伏，项羽败走。",
+    "events": [
+     "ev-gaxia"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-xiangyu-fanzeng",
+  "a": "项羽",
+  "b": "范增",
+  "summary": "亚父之信与反间之疑：项羽唯一顶级谋士的离场。",
+  "phases": [
+   {
+    "year": -208,
+    "title": "尊为亚父",
+    "type": "信任",
+    "desc": "范增为项羽谋主，年七十而辅项氏。",
+    "events": []
+   },
+   {
+    "year": -206,
+    "title": "鸿门主杀",
+    "type": "主张",
+    "desc": "范增力主击杀刘邦，项羽不用，范增叹「竖子不足与谋」。",
+    "events": [
+     "ev-hongmen"
+    ]
+   },
+   {
+    "year": -204,
+    "title": "反间而去",
+    "type": "离场",
+    "desc": "陈平行反间，项羽疑范增，范增请归，未至彭城而死。",
+    "events": [
+     "ev-xingyang"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-lvhou-hanxin",
+  "a": "吕后",
+  "b": "韩信",
+  "summary": "执行者与被执行者：韩信之死的直接主导。",
+  "phases": [
+   {
+    "year": -196,
+    "title": "设计诛信",
+    "type": "执行",
+    "desc": "刘邦出征陈豨，吕后与萧何谋，诈称陈豨已破，诳韩信入贺而斩之。",
+    "events": [
+     "ev-hanxin-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-lvhou-qifuren",
+  "a": "吕后",
+  "b": "戚夫人",
+  "summary": "夺储之争的对立面，结局最惨烈的一段汉初宫廷史。",
+  "phases": [
+   {
+    "year": null,
+    "title": "宠衰而争",
+    "type": "对立",
+    "desc": "戚夫人得宠，吕后留守关中，渐疏远。",
+    "events": []
+   },
+   {
+    "year": -196,
+    "title": "易储之争",
+    "type": "决战",
+    "desc": "刘邦欲废刘盈立刘如意，赖张良、周昌、叔孙通等力争而止。",
+    "events": [
+     "ev-duochu"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "人彘之祸",
+    "type": "报复",
+    "desc": "刘邦崩后，吕后囚戚夫人、鸩杀赵王如意，为「人彘」之事。",
+    "events": []
+   }
+  ]
+ },
+ {
+  "id": "rel-lvhou-ruyi",
+  "a": "吕后",
+  "b": "刘如意",
+  "summary": "从被护到被害：周昌之护终究敌不过吕后之怨。",
+  "phases": [
+   {
+    "year": -198,
+    "title": "封赵王",
+    "type": "封王",
+    "desc": "刘邦封戚夫人子如意为赵王。",
+    "events": [
+     "ev-ruyi-wang"
+    ]
+   },
+   {
+    "year": -195,
+    "title": "周昌护赵",
+    "type": "保护",
+    "desc": "刘邦徙周昌为赵相以护之，吕后怨戚氏，周昌亦不能救。",
+    "events": [
+     "ev-liubang-die"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rel-liubang-loujing",
+  "a": "刘邦",
+  "b": "娄敬",
+  "summary": "一个戍卒改变国都位置——「一对好耳朵」的最佳注脚。",
+  "phases": [
+   {
+    "year": -202,
+    "title": "戍卒上书",
+    "type": "进言",
+    "desc": "娄敬以戍卒身份求见，建议都关中，张良赞成，刘邦即日西都。",
+    "events": [
+     "ev-capital"
+    ]
+   },
+   {
+    "year": -200,
+    "title": "谏阻击匈奴",
+    "type": "直谏",
+    "desc": "白登之围前娄敬劝阻，刘邦不听，被械系广武；围解后刘邦道歉封侯。",
+    "events": [
+     "ev-baideng"
+    ]
+   }
+  ]
+ }
+]

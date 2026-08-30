@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>汉 · 帝国纪事　第一卷：大风歌</title>
+<meta name="description" content="基于王立群《百家讲坛·大风歌》45 集逐字稿构建的汉高祖刘邦历史探索系统：时间、人物、事件、关系、史料、评价。">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 顶部 HUD -->
+<header class="hud" id="hud">
+  <div class="hud-mark" data-route="opening">
+    <span class="hud-mark-zh">漢</span>
+    <span class="hud-mark-sub">帝国纪事</span>
+  </div>
+  <nav class="hud-nav">
+    <a href="#/acts" data-nav="acts">六幕</a>
+    <a href="#/timeline" data-nav="timeline">纪年</a>
+    <a href="#/relations" data-nav="relations">关系</a>
+    <a href="#/lectures" data-nav="lectures">讲坛</a>
+    <a href="#/traits" data-nav="traits">总评</a>
+  </nav>
+  <button class="hud-search" id="btnSearch" title="搜索（⌘K / Ctrl+K）">
+    <span class="hud-search-key">⌘K</span><span class="hud-search-txt">检索</span>
+  </button>
+</header>
+
+<main id="app" class="app"></main>
+
+<footer class="foot">
+  <div class="foot-line">
+    <span>《汉 · 帝国纪事》第一卷：大风歌</span>
+    <span class="foot-sep">·</span>
+    <span>内容骨架：王立群《百家讲坛·大风歌》45 集</span>
+    <span class="foot-sep">·</span>
+    <span>一手核验：《史记》《汉书》</span>
+  </div>
+  <div class="foot-note">本站不转载讲座全文，仅作摘要、结构化与溯源。凡标明「王立群观点」者均为解释与评价，不等同于史实。</div>
+</footer>
+
+<!-- 命令面板 -->
+<div class="palette-wrap" id="palette" hidden>
+  <div class="palette-mask" data-close></div>
+  <div class="palette">
+    <div class="palette-bar">
+      <span class="palette-hint">检索</span>
+      <input id="paletteInput" type="text" placeholder="人物 / 事件 / 关系 / 讲坛集数…" autocomplete="off">
+      <button type="button" class="palette-esc" data-close aria-label="关闭检索">ESC</button>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/vendor/gsap-3.13.0.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

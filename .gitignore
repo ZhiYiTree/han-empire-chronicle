@@ -1,0 +1,28 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# ---------- 备份与临时产物 ----------
+*.bak
+*.tmp
+*.log
+_probe.html
+smoke-output.txt
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- WorkBuddy 工作区数据（工具私有，不入库）----------
+.workbuddy/
+clipboard-images/
+
+# ---------- Node（本项目零依赖，仅占位）----------
+node_modules/

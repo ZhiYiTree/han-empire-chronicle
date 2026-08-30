@@ -1,0 +1,2302 @@
+[
+ {
+  "id": "src-史记项羽本纪",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "项羽本纪",
+  "author": "",
+  "url": "",
+  "citations": 34,
+  "episodes": [
+   4,
+   5,
+   6,
+   8,
+   11,
+   12,
+   13,
+   14
+  ],
+  "topics": [
+   "说明刘项双方实力悬殊",
+   "记载项羽封章邯为雍王及关中一分为四的分封安排",
+   "曹无伤向项羽告密的内容",
+   "范增劝项羽急击刘邦"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记高祖本纪",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "高祖本纪",
+  "author": "",
+  "url": "",
+  "citations": 29,
+  "episodes": [
+   1,
+   2,
+   3,
+   4,
+   7,
+   8,
+   9,
+   13,
+   14,
+   15,
+   17,
+   41
+  ],
+  "topics": [
+   "说明刘邦面相的帝王叙事写法",
+   "说明刘邦空手赴吕公贺宴并因此得妻",
+   "说明吕公不顾妻子反对、独断嫁女",
+   "老父为吕雉相面之语"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记留侯世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "留侯世家",
+  "author": "",
+  "url": "",
+  "citations": 23,
+  "episodes": [
+   3,
+   4,
+   7,
+   8,
+   9,
+   11,
+   14,
+   15,
+   17,
+   27
+  ],
+  "topics": [
+   "说明张良讲《太公兵法》而刘邦独能领会",
+   "说明张良向他人讲《太公兵法》无人能懂",
+   "张良劝刘邦还军霸上之语",
+   "张良批评刘邦欲居秦宫"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记淮阴侯列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "淮阴侯列传",
+  "author": "",
+  "url": "",
+  "citations": 20,
+  "episodes": [
+   7,
+   10,
+   12,
+   15,
+   37,
+   38
+  ],
+  "topics": [
+   "韩信临刑呼喊，为夏侯婴所救",
+   "萧何向刘邦力荐韩信",
+   "记载韩信蹭食亭长家、漂母饭信等早年经历",
+   "记载韩信以木罂缻渡河袭安邑的破魏之战"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述）",
+  "author": "",
+  "url": "",
+  "citations": 17,
+  "episodes": [
+   33,
+   36,
+   39,
+   40,
+   43,
+   44,
+   45
+  ],
+  "topics": [
+   "戚夫人主动发起夺储之争",
+   "陈馀向刘邦提出的出兵条件",
+   "刘邦过赵时辱骂女婿张敖之重",
+   "刘邦念郦食其之功而封其子"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记陈丞相世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "陈丞相世家",
+  "author": "",
+  "url": "",
+  "citations": 10,
+  "episodes": [
+   11,
+   22,
+   23
+  ],
+  "topics": [
+   "刘邦拨四万金给陈平且不予查账",
+   "《史记》罕见的对男性外貌的评价",
+   "嫂子不满陈平不事生产，其兄因之休妻",
+   "魏无知为陈平辩才与德之别"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记萧相国世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "萧相国世家",
+  "author": "",
+  "url": "",
+  "citations": 8,
+  "episodes": [
+   7,
+   13,
+   17,
+   29,
+   37
+  ],
+  "topics": [
+   "萧何劝阻刘邦攻项羽",
+   "记载刘邦部将入咸阳后的抢掠分财",
+   "说明萧何的秦吏出身与行政能力",
+   "刘邦赐萧何的三项特权（带剑、着履、不必小步快行）"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记曹相国世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "曹相国世家",
+  "author": "",
+  "url": "",
+  "citations": 5,
+  "episodes": [
+   21,
+   28
+  ],
+  "topics": [
+   "曹参召集学者讨论治国而莫衷一是，遂问胶西葛公",
+   "西汉初年黄老治国思想的来源与实践",
+   "曹参继任相国后的施政方针",
+   "曹参答惠帝之问，「萧规曹随」典故出处"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次未标篇目",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次未标篇目）",
+  "author": "",
+  "url": "",
+  "citations": 5,
+  "episodes": [
+   31,
+   32
+  ],
+  "topics": [
+   "太公按家令所教之言，直接触发尊号之议",
+   "项羽以烹太公胁降时刘邦的答语",
+   "韩王信劝刘邦还定三秦，显示其战略见识",
+   "刘邦致书责备韩王信：不可轻死，也不可只为活命而不负责任"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦语",
+  "author": "",
+  "url": "",
+  "citations": 4,
+  "episodes": [
+   16,
+   23,
+   28
+  ],
+  "topics": [
+   "刘邦给叔孙通制礼定下的唯一条件：自己做得来",
+   "长乐宫朝拜大典后刘邦的感叹，成为千古名言",
+   "刘邦对陈平的定评",
+   "刘邦为萧何定位：诸将为功狗，萧何为功人"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记高祖本纪讲次引述",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "高祖本纪（讲次引述）",
+  "author": "",
+  "url": "",
+  "citations": 4,
+  "episodes": [
+   31,
+   41
+  ],
+  "topics": [
+   "未央宫上刘邦对太公说的原话",
+   "欢的是沛县乡亲而非刘邦——「哀歌说」第一条理由",
+   "刘邦对故乡的悲情——「哀歌说」第二条理由",
+   "丰邑赋税徭役比照沛县一体免除"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-元代散曲般涉调哨遍高祖还乡睢景臣",
+  "type": "modern_research",
+  "title": "元代散曲",
+  "section": "般涉调·哨遍《高祖还乡》（睢景臣）",
+  "author": "",
+  "url": "",
+  "citations": 4,
+  "episodes": [
+   41
+  ],
+  "topics": [
+   "以同村农民视角描写高祖还乡的排场",
+   "揭刘邦的老底，还原其布衣出身",
+   "以账册历数刘邦旧日的欠债",
+   "嘲讽刘邦改名不还债，是文学虚构而非史实"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-汉书高帝纪",
+  "type": "primary_history",
+  "title": "汉书",
+  "section": "高帝纪",
+  "author": "",
+  "url": "",
+  "citations": 3,
+  "episodes": [
+   1,
+   15,
+   16
+  ],
+  "topics": [
+   "与《史记·高祖本纪》同载刘邦出生与面相传奇",
+   "记载参与刘邦登基仪式的两名具名人物",
+   "说明叔孙通在称帝过程中地位特殊"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记陈涉世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "陈涉世家",
+  "author": "",
+  "url": "",
+  "citations": 3,
+  "episodes": [
+   2,
+   3
+  ],
+  "topics": [
+   "说明陈胜吴广起义的直接法律诱因",
+   "说明起义者冒死一搏的心态",
+   "陈胜所遣入关的周文之军先胜后败"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记郦生陆贾列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "郦生陆贾列传",
+  "author": "",
+  "url": "",
+  "citations": 3,
+  "episodes": [
+   12,
+   28
+  ],
+  "topics": [
+   "郦食其临死之言",
+   "刘邦拒斥《诗》《书》，引发马上马下之争",
+   "赵佗为陆贾的谈吐所折服"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记樊郦滕灌列传本集引",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "樊郦滕灌列传（本集引）",
+  "author": "",
+  "url": "",
+  "citations": 3,
+  "episodes": [
+   21,
+   24,
+   25
+  ],
+  "topics": [
+   "说明惠帝对救命恩人夏侯婴的特殊优待",
+   "说明中涓虽为侍从，却是最亲近机密之职",
+   "樊哙以赵高之事谏刘邦勿耽于宦者而忘功臣"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述周昌语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述周昌语）",
+  "author": "",
+  "url": "",
+  "citations": 3,
+  "episodes": [
+   34,
+   44
+  ],
+  "topics": [
+   "周昌在朝堂上力诤反对易储",
+   "周昌当面顶撞刘邦，刘邦一笑置之",
+   "周昌在易储之争中顶撞刘邦"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记田儋列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "田儋列传",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   8,
+   12
+  ],
+  "topics": [
+   "记载田荣兄弟在齐地的活动与项羽平齐之战",
+   "韩信求封的记载之一"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记季布栾布列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "季布栾布列传",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   9,
+   19
+  ],
+  "topics": [
+   "刘邦说动丁公解围之语",
+   "说明时人对季布忍辱求全的正面评价"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记秦始皇本纪",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "秦始皇本纪",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   13,
+   17
+  ],
+  "topics": [
+   "记载项羽入咸阳后的劫掠与财宝分配",
+   "说明此次行刺是当时重大案件"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记陈涉世家本集引",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "陈涉世家（本集引）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   18,
+   26
+  ],
+  "topics": [
+   "说明秦末反秦武装之众与民心向背",
+   "说明秦末武装林立，多数被吞并，陈婴归项梁为幸"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引钟离眜语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引钟离眜语",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   19,
+   20
+  ],
+  "topics": [
+   "钟离眜自杀前对韩信的斥责",
+   "韩信逼杀钟离眜自明"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引诸将语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引诸将语",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   20,
+   21
+  ],
+  "topics": [
+   "刘邦问计时诸将的态度，无人问证据",
+   "与告韩信谋反时诸将口径一致，反映迎合之风"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记樊郦滕灌列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "樊郦滕灌列传",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   25
+  ],
+  "topics": [
+   "樊哙出身与擅闯汉宫的情形",
+   "鸿门宴后樊哙劝刘邦不辞而别"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-西京杂记讲次未标篇目",
+  "type": "modern_research",
+  "title": "西京杂记",
+  "section": "（讲次未标篇目）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   31,
+   33
+  ],
+  "topics": [
+   "太上皇入宫后不乐的缘由，促成刘邦营造新丰",
+   "戚夫人的才艺，解释其专宠原因（可靠性远不如《史记》）"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述吕后语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述吕后语）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   34
+  ],
+  "topics": [
+   "吕后跪谢周昌",
+   "吕后以一哭二闹三上吊阻止鲁元公主和亲，刘邦遂作罢"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述诸将语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述诸将语）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   40,
+   45
+  ],
+  "topics": [
+   "诸将轻敌，认为黥布不堪一击",
+   "众将一致主战韩信，被刘邦独断否定"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述刘邦拒医语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述刘邦拒医语）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   42,
+   43
+  ],
+  "topics": [
+   "刘邦拒绝医治，自认天命已尽",
+   "刘邦自命不凡最典型的自白"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述刘邦骂郦食其语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述刘邦骂郦食其语）",
+  "author": "",
+  "url": "",
+  "citations": 2,
+  "episodes": [
+   43,
+   44
+  ],
+  "topics": [
+   "刘邦第二次复述「天下同苦秦久矣」",
+   "郦食其激刘邦，刘邦反骂之后又道歉让座"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-周书",
+  "type": "modern_research",
+  "title": "周书",
+  "section": "",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   7
+  ],
+  "topics": [
+   "萧何引古语劝刘邦接受分封"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记夏侯婴列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "夏侯婴列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   9
+  ],
+  "topics": [
+   "记载夏侯婴救刘邦子女、刘邦怒欲斩婴"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-汉纪",
+  "type": "modern_research",
+  "title": "汉纪",
+  "section": "",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   9
+  ],
+  "topics": [
+   "荀悦对彭城之战双方士气的评论"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记黥布列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "黥布列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   9
+  ],
+  "topics": [
+   "随何指责项羽、说动黥布的关键之语"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记魏豹彭越列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "魏豹彭越列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   10
+  ],
+  "topics": [
+   "魏豹向郦食其说明其不堪刘邦辱骂"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记外戚世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "外戚世家",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   10
+  ],
+  "topics": [
+   "记载薄姬身世、相面“当生天子”及梦苍龙据腹而生刘恒"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记灌婴列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "灌婴列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   12
+  ],
+  "topics": [
+   "韩信自封的记载之一"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-汉书陈平传",
+  "type": "primary_history",
+  "title": "汉书",
+  "section": "陈平传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   12
+  ],
+  "topics": [
+   "韩信自封的又一记载"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-汉书蒯通传",
+  "type": "primary_history",
+  "title": "汉书",
+  "section": "蒯通传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   12
+  ],
+  "topics": [
+   "韩信自封的第三条记载"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-秦汉史",
+  "type": "modern_research",
+  "title": "秦汉史",
+  "section": "",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   13
+  ],
+  "topics": [
+   "吕思勉认为项羽的分封大体公平"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-新语",
+  "type": "modern_research",
+  "title": "新语",
+  "section": "",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   14
+  ],
+  "topics": [
+   "陆贾所著，流传至今，是其学者身份的证明"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-代侯公说项羽词",
+  "type": "modern_research",
+  "title": "代侯公说项羽词",
+  "section": "",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   14
+  ],
+  "topics": [
+   "苏轼因侯公说词失传而作的拟代之文"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记张耳陈馀列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "张耳陈馀列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   15
+  ],
+  "topics": [
+   "记载张耳受封赵王及其与刘邦的旧交"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记汉书叔孙通传本集引其语",
+  "type": "modern_research",
+  "title": "史记/汉书",
+  "section": "叔孙通传（本集引其语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   16
+  ],
+  "topics": [
+   "鲁地两位儒生拒绝应征，当面斥叔孙通事主近十人"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记汉书叔孙通传",
+  "type": "modern_research",
+  "title": "史记/汉书",
+  "section": "叔孙通传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   16
+  ],
+  "topics": [
+   "叔孙通对被斥的回应，笑骂对方不知变通"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引朝堂实况",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引朝堂实况",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   16
+  ],
+  "topics": [
+   "说明称帝庆功宴上的混乱，是叔孙通制礼的契机"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引娄敬语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引娄敬语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   16
+  ],
+  "topics": [
+   "娄敬区分周之德与汉之力，论证不应都洛阳"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-晋书阮籍言论本集引阮籍登广武古战场",
+  "type": "modern_research",
+  "title": "晋书/阮籍言论（本集引）",
+  "section": "阮籍登广武古战场",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   17
+  ],
+  "topics": [
+   "魏晋人对刘邦称帝的贬抑评价"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦诏书",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦诏书",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   18
+  ],
+  "topics": [
+   "说明刘邦对田横的软硬兼施"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦诏郦商之语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦诏郦商之语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   18
+  ],
+  "topics": [
+   "刘邦为田横入京预先解除郦家报复之患"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-元陈杞田横墓",
+  "type": "modern_research",
+  "title": "元·陈杞",
+  "section": "《田横墓》",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   18
+  ],
+  "topics": [
+   "以田横与项羽（匹马向江东）对比，赞扬田横的气节"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-清王士祯咏田横诗",
+  "type": "modern_research",
+  "title": "清·王士祯",
+  "section": "咏田横诗",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   18
+  ],
+  "topics": [
+   "三句写项羽、一句写田横门客，谓项羽终不及田横五百壮士"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记季布栾布列传本集引朝堂对话",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "季布栾布列传（本集引朝堂对话）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   19
+  ],
+  "topics": [
+   "季布在吕后朝阻止对匈奴用兵"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦斩丁公之语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦斩丁公之语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   19
+  ],
+  "topics": [
+   "刘邦为杀丁公给出的公开理由"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引陈平论项羽亲信",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引陈平论项羽亲信",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   19
+  ],
+  "topics": [
+   "说明钟离眜在楚军中的地位"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引朱家诫子语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引朱家诫子语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   19
+  ],
+  "topics": [
+   "朱家厚待被当作奴隶买来的季布"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引滕公语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引滕公语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   19
+  ],
+  "topics": [
+   "夏侯婴向朱家说明刘邦必杀季布的原因"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引史文",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引史文",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   20
+  ],
+  "topics": [
+   "刘邦听完诸将表态后的反应"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记陈丞相世家本集所述四问",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "陈丞相世家（本集所述四问）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   20
+  ],
+  "topics": [
+   "陈平以四问论证不可力取，遂献伪游之计"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-清袁保恒过韩侯岭题壁",
+  "type": "modern_research",
+  "title": "清·袁保恒",
+  "section": "《过韩侯岭题壁》",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   20
+  ],
+  "topics": [
+   "以诗概括刘邦外患项羽、内患韩信，韩信必不能免猜疑"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记陈丞相世家本集引",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "陈丞相世家（本集引）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   22
+  ],
+  "topics": [
+   "陈平早年的抱负与才能"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引吕后语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引吕后语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   22
+  ],
+  "topics": [
+   "陈平在刘邦灵前痛哭以取信吕后"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记匈奴列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "匈奴列传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   23
+  ],
+  "topics": [
+   "白登解围的一种记载"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记集解裴骃陈丞相世家注",
+  "type": "modern_research",
+  "title": "史记集解（裴骃）",
+  "section": "陈丞相世家注",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   23
+  ],
+  "topics": [
+   "白登解围的另一种（更近奇计）说法"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引吕媭语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引吕媭语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   23
+  ],
+  "topics": [
+   "陈平为相不治事以释吕后戒心"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记高祖本纪本集引以校正",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "高祖本纪（本集引以校正）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   23
+  ],
+  "topics": [
+   "校正《陈丞相世家》的单记"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记项羽本纪本集引以校正",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "项羽本纪（本集引以校正）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   23
+  ],
+  "topics": [
+   "校正《陈丞相世家》对金蝉脱壳的记述"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记绛侯周勃世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "绛侯周勃世家",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   24
+  ],
+  "topics": [
+   "周勃无文、慢待儒生而受刘邦信任"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦临终语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦临终语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   24
+  ],
+  "topics": [
+   "刘邦对周勃的托付与预言"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集所述灌婴军功",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集所述灌婴军功",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   24
+  ],
+  "topics": [
+   "灌婴封侯的三大军功"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引贾谊事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引贾谊事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   24
+  ],
+  "topics": [
+   "「绛灌无文」典故的另一面"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-资治通鉴本集引樊哙语",
+  "type": "chronicle",
+  "title": "资治通鉴",
+  "section": "本集引樊哙语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   25
+  ],
+  "topics": [
+   "《史记》《汉书》未载而《通鉴》独有，说明司马光所见资料更多"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-资治通鉴元胡三省注胡三省注",
+  "type": "modern_research",
+  "title": "资治通鉴（元·胡三省注）",
+  "section": "胡三省注",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   25
+  ],
+  "topics": [
+   "本集的核心论点，王立群加以三点阐释"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集所述下邑之事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集所述下邑之事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   25
+  ],
+  "topics": [
+   "吕泽之功与下邑战略的提出"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引项羽与周苛对话",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引项羽与周苛对话",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   26
+  ],
+  "topics": [
+   "周苛拒降而死"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引周昌语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引周昌语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   26
+  ],
+  "topics": [
+   "周昌直言敢谏的典型事例"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引吕后事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引吕后事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   26
+  ],
+  "topics": [
+   "郦商阻止屠杀功臣的背景"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引郦商说审食其之语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引郦商说审食其之语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   26
+  ],
+  "topics": [
+   "郦商的第一大功"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集所述郦寄说吕禄",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集所述郦寄说吕禄",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   26
+  ],
+  "topics": [
+   "促成周勃取得北军、诛灭诸吕的关键"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-汉书张良传",
+  "type": "primary_history",
+  "title": "汉书",
+  "section": "张良传",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   27
+  ],
+  "topics": [
+   "张良学道辟谷的记载"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-资治通鉴司马光评张良",
+  "type": "chronicle",
+  "title": "资治通鉴",
+  "section": "司马光评张良",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   27
+  ],
+  "topics": [
+   "「明哲保身」一派的代表意见，王立群部分反驳"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引雍齿事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引雍齿事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   27
+  ],
+  "topics": [
+   "雍齿叛变的第一个原因：素来看不上刘邦"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-晋书十六国本集引刘渊语刘渊论随陆绛灌",
+  "type": "modern_research",
+  "title": "晋书/十六国（本集引刘渊语）",
+  "section": "刘渊论「随陆绛灌」",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   28
+  ],
+  "topics": [
+   "古人对汉初封侯标准的经典批评"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记郦生陆贾列传本集引",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "郦生陆贾列传（本集引）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   28
+  ],
+  "topics": [
+   "陆贾说降南越的说辞结构"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-新语陆贾本集引",
+  "type": "modern_research",
+  "title": "新语（陆贾）",
+  "section": "本集引",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   28
+  ],
+  "topics": [
+   "陆贾论秦亡之由，点出逆取顺守、恃力而亡"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引群臣语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引群臣语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   28
+  ],
+  "topics": [
+   "群臣抗议萧何居首功"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记赵佗传南越列传",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "赵佗传（南越列传）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   28
+  ],
+  "topics": [
+   "赵佗两问陆贾「我孰与萧何曹参韩信贤」「我孰与皇帝贤」"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记萧相国世家本集引鄂千秋语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "萧相国世家（本集引鄂千秋语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   29
+  ],
+  "topics": [
+   "为萧何定第一功臣提供理论依据"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-睡虎地秦简本集引出土秦律",
+  "type": "modern_research",
+  "title": "睡虎地秦简（本集引）",
+  "section": "出土秦律",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   29
+  ],
+  "topics": [
+   "说明萧何以熟悉秦律而成为丞相最佳人选"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记荆燕世家",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "荆燕世家",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "说明封刘贾等同姓王的政治动机"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引田肯语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引田肯语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "齐地的重要与封亲子为齐王的理由"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦令",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦令",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "刘邦以语言为标志扩充齐国人口"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘邦答父语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘邦答父语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "羹颉侯之封的由来（锅铲刮锅之声以为侯号）"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引贾谊语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引贾谊语",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "连主张中央集权的贾谊也认为封同姓王使天下安"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘交事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘交事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "刘交在文化史上的地位"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记本集引刘濞事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "本集引刘濞事",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   30
+  ],
+  "topics": [
+   "王立群明确表示不信此说"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记高祖本纪讲次引述诏书",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "高祖本纪（讲次引述诏书）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   31
+  ],
+  "topics": [
+   "刘邦下诏尊太公为太上皇的理论依据"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记汉兴以来将相名臣年表",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "汉兴以来将相名臣年表",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   31
+  ],
+  "topics": [
+   "比《高祖本纪》多出「太上皇辇上坐」与「太上皇大笑」，是判断夸富而非嘲讽的关键"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-明代张萱文汉高祖尊母不尊父",
+  "type": "modern_research",
+  "title": "明代张萱文",
+  "section": "汉高祖尊母不尊父",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   31
+  ],
+  "topics": [
+   "明代文人对刘邦尊母不尊父的批评"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次未标篇目阏氏三条理由",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次未标篇目，阏氏三条理由）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   32
+  ],
+  "topics": [
+   "阏氏劝冒顿撤围的说辞"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述商山四皓语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述商山四皓语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   33
+  ],
+  "topics": [
+   "说明刘邦对戚夫人母子的极度宠爱"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记吕太后本纪讲次引述",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "吕太后本纪（讲次引述）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   33
+  ],
+  "topics": [
+   "推算二人年龄差在三十二岁以上"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述鸿鹄歌",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述《鸿鹄歌》）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   33
+  ],
+  "topics": [
+   "刘邦见四皓后表明太子羽翼已成、无可奈何"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述叔孙通语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述叔孙通语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   33
+  ],
+  "topics": [
+   "朝臣反对废立的主要理据"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-宋人诗戚夫人",
+  "type": "modern_research",
+  "title": "宋人诗",
+  "section": "戚夫人",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   34
+  ],
+  "topics": [
+   "以戚夫人口吻把悲剧归咎于商山四皓"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-清人咏古诗讲次未标题目",
+  "type": "modern_research",
+  "title": "清人咏古诗",
+  "section": "（讲次未标题目）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   34
+  ],
+  "topics": [
+   "讽刺刘邦与项羽一样没能保护好自己的女人"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述白马盟誓",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述白马盟誓）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   34
+  ],
+  "topics": [
+   "白马盟誓三要点"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述张耳陈馀关系",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述张耳陈馀关系）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   35
+  ],
+  "topics": [
+   "张耳与陈馀的生死之交"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述蒯通语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述蒯通语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   35
+  ],
+  "topics": [
+   "蒯通为武臣谋划的招降之策"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述张耳责陈馀语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述张耳责陈馀语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   36
+  ],
+  "topics": [
+   "巨鹿城中张耳催促陈馀出兵"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述狱中状况",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述狱中状况）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   36
+  ],
+  "topics": [
+   "贯高受刑之惨，遍体无一处完肤"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述泄公问语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述泄公问语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   36
+  ],
+  "topics": [
+   "泄公奉命入狱探问赵王是否主谋"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记淮阴侯列传讲次引述韩信临终语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "淮阴侯列传（讲次引述韩信临终语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   37
+  ],
+  "topics": [
+   "韩信临刑前的悔恨"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记淮阴侯列传讲次引述蒯通语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "淮阴侯列传（讲次引述蒯通语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   38
+  ],
+  "topics": [
+   "功高震主、天不收地不留的处境"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-唐人许浑诗韩信庙",
+  "type": "modern_research",
+  "title": "唐人许浑诗",
+  "section": "韩信庙",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   38
+  ],
+  "topics": [
+   "后人以「手握重兵时不反、无兵时反」质疑谋反说"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述樊哙事",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述樊哙事）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   38
+  ],
+  "topics": [
+   "韩信羞与绛灌为伍的一幕"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述汉中对策",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述汉中对策）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   39
+  ],
+  "topics": [
+   "韩信是以封赏换军功的首倡者，刘邦当时「大喜」"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-宋人黄庭坚诗韩信",
+  "type": "modern_research",
+  "title": "宋人黄庭坚诗",
+  "section": "韩信",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   39
+  ],
+  "topics": [
+   "黄庭坚认为求封齐王是韩信的人生败笔"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述韩信论将兵",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述韩信论将兵）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   39
+  ],
+  "topics": [
+   "韩信当廷冒犯刘邦，留下「多多益善」成语"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述萧何语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述萧何语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   40
+  ],
+  "topics": [
+   "萧何为黥布辩护"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述黥布语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述黥布语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   40
+  ],
+  "topics": [
+   "黥布判断刘邦不会亲征"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述刘邦与黥布阵前问答",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述刘邦与黥布阵前问答）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   40
+  ],
+  "topics": [
+   "两军阵前的著名对话"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述栾布语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述栾布语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   40
+  ],
+  "topics": [
+   "栾布请求在受烹前说一段话"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-新唐书礼乐志",
+  "type": "primary_history",
+  "title": "新唐书",
+  "section": "礼乐志",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   41
+  ],
+  "topics": [
+   "唐太宗还乡被史臣比同汉高祖的沛县之会"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-唐太宗诗幸武功庆善宫",
+  "type": "modern_research",
+  "title": "唐太宗诗",
+  "section": "幸武功庆善宫",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   41
+  ],
+  "topics": [
+   "李世民把《大风歌》理解为胜利者的欢歌"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记萧相国世家讲次未明标篇目",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "萧相国世家（讲次未明标篇目）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   41
+  ],
+  "topics": [
+   "萧何自污之后刘邦的反应，说明刘邦晚年连萧何都不信任"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述刘邦语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述刘邦语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   42
+  ],
+  "topics": [
+   "刘邦把告萧何的状纸交给萧何，让他自己去向百姓解释"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述臧衍语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述臧衍语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   42
+  ],
+  "topics": [
+   "臧衍说动张胜，进而改变卢绾的立场"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述吕后问相国",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述吕后问相国）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   42
+  ],
+  "topics": [
+   "刘邦临终的相国与太尉人事安排"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述郦商语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述郦商语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   42
+  ],
+  "topics": [
+   "郦商劝止吕后的族诛之谋"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述刘邦对使者语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述刘邦对使者语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   43
+  ],
+  "topics": [
+   "彭城大败后刘邦的速胜判断与反攻谋划"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-讲次引古诗未标篇目",
+  "type": "modern_research",
+  "title": "（讲次引古诗）",
+  "section": "（未标篇目）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   43
+  ],
+  "topics": [
+   "王立群引以说明「一生自信」与「名利双全」之难，而刘邦二者兼有"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记高祖功臣侯者年表",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "高祖功臣侯者年表",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   44
+  ],
+  "topics": [
+   "共享成果的规模（讲座注明此表并不完备）"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述吕后骂周昌语",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述吕后骂周昌语）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   44
+  ],
+  "topics": [
+   "周昌碰上吕后一言不发，反证刘邦有容人之量"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述鸿门宴前问答",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述鸿门宴前问答）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   45
+  ],
+  "topics": [
+   "刘邦承认兵力不如项羽"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-史记讲次引述汉中对策问答",
+  "type": "primary_history",
+  "title": "史记",
+  "section": "（讲次引述汉中对策问答）",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   45
+  ],
+  "topics": [
+   "刘邦承认勇悍仁强皆不如项羽"
+  ],
+  "reliabilityNote": ""
+ },
+ {
+  "id": "src-新语陆贾撰",
+  "type": "modern_research",
+  "title": "新语",
+  "section": "陆贾撰",
+  "author": "",
+  "url": "",
+  "citations": 1,
+  "episodes": [
+   45
+  ],
+  "topics": [
+   "用其所长：陆贾之文才"
+  ],
+  "reliabilityNote": ""
+ }
+]
