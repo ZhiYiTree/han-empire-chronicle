@@ -635,6 +635,7 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .palette{
   position:relative;width:min(680px,92vw);background:var(--ink-2);
   border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(0,0,0,.6);
+  overflow:hidden;
 }
 .palette-bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line)}
 .palette-hint{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--jin)}
@@ -646,6 +647,11 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .palette-esc{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--bo-faint);border:1px solid var(--line);padding:2px 7px}
 .palette-esc:hover{color:var(--bo);border-color:var(--hud)}
 .palette-list{max-height:52vh;overflow-y:auto}
+/* 检索结果列表的滚动进度：贴面板底边，独立分层，不与主页面进度条混淆 */
+.pal-progress{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:3;pointer-events:none;
+  background:rgba(216,205,187,.05);overflow:hidden}
+.pal-progress>i{display:block;height:100%;transform:scaleX(0);transform-origin:left center;
+  background:linear-gradient(90deg,var(--jin),var(--zhu));box-shadow:0 0 8px rgba(184,59,43,.5)}
 .pal-group{font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--bo-faint);padding:12px 18px 6px}
 .pal-item{padding:11px 18px;cursor:pointer;display:flex;align-items:baseline;gap:12px;border-left:2px solid transparent}
 .pal-item:hover,.pal-item.on{background:rgba(216,205,187,.05);border-left-color:var(--zhu)}
@@ -779,12 +785,13 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
    依赖：Lenis（平滑滚动）+ GSAP ScrollTrigger（滚动驱动）
    ================================================================== */
 
-/* 顶部阅读进度条 */
-.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;pointer-events:none;
-  background:rgba(216,205,187,.06)}
+/* 阅读进度：贴在 HUD 底边，与顶栏融为一体；
+   z-index:1 只在 HUD 内部生效，检索面板(z-index:100)始终完整盖在其上，分层清晰 */
+.scroll-progress{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:1;pointer-events:none;
+  background:rgba(216,205,187,.05);overflow:hidden}
 .scroll-progress>i{display:block;height:100%;transform:scaleX(0);transform-origin:left center;
   background:linear-gradient(90deg,var(--jin),var(--zhu));
-  box-shadow:0 0 12px rgba(184,59,43,.45)}
+  box-shadow:0 0 10px rgba(184,59,43,.5)}
 
 /* 顶栏：下滚后收缩变紧凑 */
 .hud{transition:height .45s var(--ease),background .45s var(--ease)}
@@ -829,12 +836,7 @@ html.lenis,html.lenis body{height:auto}
    1 阅读进度融入 HUD 底边　2 滚动条统一　3 检索面板　4 关系图真实照片
    ================================================================== */
 
-/* ---------- 1. 阅读进度：贴在 HUD 底边，与顶栏一体（不再悬浮于页面顶部） ---------- */
-.scroll-progress{position:absolute;top:auto;bottom:0;left:0;right:0;height:2px;
-  pointer-events:none;background:rgba(216,205,187,.05);overflow:hidden;z-index:2}
-.scroll-progress>i{display:block;height:100%;transform:scaleX(0);transform-origin:left center;
-  background:linear-gradient(90deg,var(--jin),var(--zhu));
-  box-shadow:0 0 10px rgba(184,59,43,.5)}
+/* ---------- 1. 阅读进度：已统一为「贴 HUD 底边」规则（见上方 .scroll-progress，仅此一处定义） ---------- */
 
 /* ---------- 2. 滚动条：暗色细条，替换系统默认亮色粗条 ---------- */
 *{scrollbar-width:thin;scrollbar-color:rgba(168,137,79,.4) transparent}

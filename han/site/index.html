@@ -46,7 +46,7 @@
 </footer>
 
 <!-- 命令面板 -->
-<div class="palette-wrap" id="palette" hidden>
+<div class="palette-wrap" id="palette" hidden data-lenis-prevent>
   <div class="palette-mask" data-close></div>
   <div class="palette">
     <div class="palette-bar">
@@ -55,6 +55,7 @@
       <button type="button" class="palette-esc" data-close aria-label="关闭检索">ESC</button>
     </div>
     <div class="palette-list" id="paletteList"></div>
+    <i class="pal-progress" id="palProgress" aria-hidden="true"><i></i></i>
     <div class="palette-foot">
       <span class="pal-keys">↑↓ 选择　↵ 打开　ESC 关闭</span>
       <span id="palCount"></span>

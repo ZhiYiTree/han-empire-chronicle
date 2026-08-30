@@ -37,10 +37,12 @@
     if (!window.Lenis || prefersReduced || lenis) { bindProgressFallback(); return; }
 
     lenis = new window.Lenis({
-      lerp: 0.085,
+      lerp: 0.12,            // 触控板带惯性，调高 lerp 让跟手、削弱漂移滞后感
       wheelMultiplier: 1,
-      touchMultiplier: 1.8,
-      smoothWheel: true
+      touchMultiplier: 1.6,
+      smoothWheel: true,
+      syncTouch: true,       // 触屏走原生惯性滚动，避免双重平滑导致黏滞
+      syncTouchLerp: 0.1
     });
     if (ST) lenis.on("scroll", ST.update);
     if (window.gsap) {
@@ -1172,10 +1174,24 @@
       palList = document.getElementById("paletteList");
   var palItems = [], palIdx = 0;
 
+  var palProgressEl = document.getElementById("palProgress");
+  function paintPalProgress() {
+    if (!palProgressEl || !palList) return;
+    var fill = palProgressEl.firstElementChild;
+    var max = palList.scrollHeight - palList.clientHeight;
+    var p = max > 4 ? Math.min(1, Math.max(0, palList.scrollTop / max)) : 1;
+    if (fill) fill.style.transform = "scaleX(" + p + ")";
+  }
+  palList.addEventListener("scroll", paintPalProgress, { passive: true });
   function openPal() {
     pal.hidden = false; palInput.value = ""; renderPal(""); palInput.focus();
+    paintPalProgress();                         // 重置检索进度条
+    if (lenis && lenis.stop) lenis.stop();      // 冻结背景滚动，检索面板自成一层
   }
-  function closePal() { pal.hidden = true; }
+  function closePal() {
+    pal.hidden = true;
+    if (lenis && lenis.start) lenis.start();    // 恢复背景滚动
+  }
   document.getElementById("btnSearch").addEventListener("click", openPal);
   pal.addEventListener("click", function (e) { if (e.target.dataset.close !== undefined) closePal(); });
   document.addEventListener("keydown", function (e) {
