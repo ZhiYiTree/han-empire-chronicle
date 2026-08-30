@@ -19,8 +19,63 @@
 
   var app = document.getElementById("app");
   var pageMotion = null;
+  var lenis = null;
+  var ST = null;   // ScrollTrigger
+  var prefersReduced = typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- 动效基础设施 ----------
+     Lenis 负责平滑滚动（3KB，不劫持滚动条、不破坏 sticky 与 IO），
+     ScrollTrigger 负责滚动驱动动画，两者通过 GSAP ticker 同步。      */
+  function initMotionBase() {
+    if (window.gsap && window.ScrollTrigger) {
+      window.gsap.registerPlugin(window.ScrollTrigger);
+      ST = window.ScrollTrigger;
+    }
+    if (!window.Lenis || prefersReduced || lenis) { bindProgressFallback(); return; }
+
+    lenis = new window.Lenis({
+      lerp: 0.085,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.8,
+      smoothWheel: true
+    });
+    if (ST) lenis.on("scroll", ST.update);
+    if (window.gsap) {
+      window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+      window.gsap.ticker.lagSmoothing(0);
+    } else {
+      (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
+    }
+    lenis.on("scroll", function (e) { paintProgress(e.scroll); });
+  }
+
+  /* Lenis 不可用时的进度条降级 */
+  function bindProgressFallback() {
+    var onScroll = function () {
+      var de = document.documentElement || {};
+      paintProgress(window.pageYOffset || de.scrollTop || 0);
+    };
+    onScroll();
+    if (window.addEventListener) window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  function paintProgress(scrollY) {
+    var bar = document.getElementById("scrollProgress");
+    if (!bar) return;
+    var de = document.documentElement || {};
+    var max = (de.scrollHeight || 0) - (window.innerHeight || 0);
+    var p = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+    bar.style.transform = "scaleX(" + p + ")";
+  }
+
+  function scrollToTop() {
+    if (lenis) lenis.scrollTo(0, { immediate: true });
+    else if (window.scrollTo) window.scrollTo(0, 0);
+  }
 
   function clearPageMotion() {
+    if (ST) ST.getAll().forEach(function (t) { t.kill(); });
     if (pageMotion && pageMotion.revert) pageMotion.revert();
     pageMotion = null;
   }
@@ -127,10 +182,20 @@
     else html = viewOpening();
 
     app.innerHTML = html;
-    window.scrollTo(0, 0);
+    scrollToTop();
     setNav(r.name);
     bind();
     observeReveal();
+    playPageEnter();
+    if (ST) ST.refresh();
+  }
+
+  /* 页面切换过渡：整页轻微上浮淡入，与 .rv 元素的逐个揭示形成层次 */
+  function playPageEnter() {
+    if (!window.gsap || prefersReduced) return;
+    window.gsap.fromTo(app,
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", clearProps: "opacity,transform" });
   }
 
   function setNav(name) {
@@ -373,28 +438,47 @@
 
     apply();
 
-    /* 滚动入场：节点逐个点亮（IntersectionObserver，原生、无依赖） */
+    /* 滚动动效：优先用 ScrollTrigger（轴线 scrub + 节点可回退点亮 + 年份高亮），
+       无 GSAP 或用户偏好减少动效时，降级为直接显示。 */
     var items = body.querySelectorAll(".tlx-ev");
-    if ("IntersectionObserver" in window) {
-      var ob = new IntersectionObserver(function (en) {
-        en.forEach(function (x) {
-          if (x.isIntersecting) { x.target.classList.add("in"); ob.unobserve(x.target); }
-        });
-      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-      items.forEach(function (it) { ob.observe(it); });
-    } else {
+    var years = body.querySelectorAll(".tlx-year");
+
+    if (!ST || prefersReduced) {
       items.forEach(function (it) { it.classList.add("in"); });
+      if (axis) axis.style.transform = "scaleY(1)";
+      return;
     }
 
-    /* 轴线随滚动生长 */
-    tlScroll = function () {
-      if (!axis) return;
-      var r = body.getBoundingClientRect();
-      var p = (window.innerHeight * 0.45 - r.top) / r.height;
-      axis.style.transform = "scaleY(" + Math.max(0, Math.min(1, p)) + ")";
-    };
-    tlScroll();
-    window.addEventListener("scroll", tlScroll, { passive: true });
+    // 轴线随滚动生长（scrub 0.5 → 有轻微追赶感，比直接跟随更有质感）
+    if (axis) {
+      ST.create({
+        trigger: body,
+        start: "top 70%",
+        end: "bottom 80%",
+        scrub: 0.5,
+        onUpdate: function (self) { axis.style.transform = "scaleY(" + self.progress + ")"; }
+      });
+    }
+
+    // 事件节点逐个点亮，反向滚出视口时收回
+    items.forEach(function (it) {
+      window.gsap.fromTo(it,
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1, y: 0, duration: 0.72, ease: "power2.out",
+          scrollTrigger: { trigger: it, start: "top 90%", toggleActions: "play none none reverse" }
+        });
+    });
+
+    // 年份进入视口中段时高亮
+    years.forEach(function (yr) {
+      ST.create({
+        trigger: yr,
+        start: "top 62%",
+        end: "bottom 38%",
+        onToggle: function (self) { yr.classList.toggle("active", self.isActive); }
+      });
+    });
   }
 
   /* ---------- 人物页 ---------- */
@@ -1012,6 +1096,24 @@
 
   /* ---------- 启动 ---------- */
   document.querySelector(".hud-mark").addEventListener("click", function () { go("#/"); });
+
+  /* 先启动动效基础设施（Lenis 平滑滚动 + ScrollTrigger 注册），
+     后续 render、顶栏收缩都依赖它 */
+  initMotionBase();
+
+  /* 顶栏滚动收缩：下滚超过 90px 后 HUD 变紧凑，回到顶部自动恢复 */
+  (function () {
+    var hud = document.getElementById("hud");
+    if (!hud) return;
+    var onScroll = function (y) { hud.classList.toggle("compact", y > 90); };
+    if (lenis) lenis.on("scroll", function (e) { onScroll(e.scroll || 0); });
+    else if (window.addEventListener) {
+      window.addEventListener("scroll", function () {
+        onScroll(window.pageYOffset || 0);
+      }, { passive: true });
+    }
+  })();
+
   window.addEventListener("hashchange", render);
   render();
 })();
