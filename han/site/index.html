@@ -11,9 +11,6 @@
 
 <div class="grain" aria-hidden="true"></div>
 
-<!-- 全局阅读进度 -->
-<div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
-
 <!-- 顶部 HUD -->
 <header class="hud" id="hud">
   <div class="hud-mark" data-route="opening">
@@ -30,6 +27,8 @@
   <button class="hud-search" id="btnSearch" title="搜索（⌘K / Ctrl+K）">
     <span class="hud-search-key">⌘K</span><span class="hud-search-txt">检索</span>
   </button>
+  <!-- 阅读进度：贴在 HUD 底边，与顶栏融为一体而非悬浮在外 -->
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
 </header>
 
 <main id="app" class="app"></main>
@@ -55,6 +54,10 @@
       <button type="button" class="palette-esc" data-close aria-label="关闭检索">ESC</button>
     </div>
     <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span class="pal-keys">↑↓ 选择　↵ 打开　ESC 关闭</span>
+      <span id="palCount"></span>
+    </div>
   </div>
 </div>
 

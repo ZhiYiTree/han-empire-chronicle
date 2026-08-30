@@ -575,7 +575,9 @@
 
   function graphAvatarStyle(name) {
     var a = GRAPH_AVATARS[name] || GRAPH_AVATARS["刘邦"];
-    return "--portrait:url('../img/people/" + a[0] + "');--px:" + a[1] + ";--py:" + a[2];
+    // 真实照片优先；CSS 用多层背景，照片缺失时该层不绘制，自动露出下层群像裁切
+    return "--photo:url('../img/people/" + encodeURIComponent(name) + ".jpg');" +
+      "--portrait:url('../img/people/" + a[0] + "');--px:" + a[1] + ";--py:" + a[2];
   }
   var GRAPH_NODES = [
     { name: "刘邦", x: 49, y: 51, kind: "center" },
@@ -1087,6 +1089,10 @@
     });
     if (!palItems.length) h = '<div class="pal-empty">没有匹配的人物、事件、关系或讲坛集</div>';
     palList.innerHTML = h;
+    var palCount = document.getElementById("palCount");
+    if (palCount) {
+      palCount.innerHTML = palItems.length ? "<b>" + palItems.length + "</b> 条结果" : "无匹配";
+    }
     palList.querySelectorAll(".pal-item").forEach(function (el, i) {
       el.addEventListener("click", function () { palItems[i].run(); closePal(); });
       el.addEventListener("mouseenter", function () { palIdx = i; paintPal(); });
