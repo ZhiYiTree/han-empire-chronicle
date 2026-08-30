@@ -5,6 +5,8 @@
   var PERSONS = D.persons || [], EVENTS = D.events || [], RELS = D.relations || [],
       LECS = D.lectures || [], SOURCES = D.sources || [], TRAITS = D.traits || [];
 
+  var YS = window.HAN_YUANSHI || { chapters: [], lecMap: {}, chapterMap: {} };
+
   var UNITS = ["起兵反秦", "楚汉战争", "开国建制", "功臣群像", "晚年危机", "人物总评"];
   var UNIT_Q = {
     "起兵反秦": "一个秦帝国基层小吏，为什么会被时代推到历史前台？",
@@ -179,6 +181,7 @@
     else if (r.name === "lecture") html = viewLecture(r.arg);
     else if (r.name === "traits") html = viewTraits();
     else if (r.name === "sources") html = viewSources();
+    else if (r.name === "source") html = viewSource(r.arg);
     else html = viewOpening();
 
     app.innerHTML = html;
@@ -226,6 +229,10 @@
     // 讲坛集
     app.querySelectorAll("[data-lec]").forEach(function (el) {
       el.addEventListener("click", function () { go("#/lecture/" + el.dataset.lec); });
+    });
+    // 史料篇章
+    app.querySelectorAll("[data-src]").forEach(function (el) {
+      el.addEventListener("click", function () { go("#/source/" + el.dataset.src); });
     });
     // 关系
     app.querySelectorAll("[data-rel]").forEach(function (el) {
@@ -1000,6 +1007,19 @@
       });
       h += "</div>";
     }
+    var srcIds = YS.lecMap[String(l.episode)] || [];
+    if (srcIds.length) {
+      h += '<div class="sec"><div class="sec-h">延伸阅读 · 原始史料</div>' +
+        '<div class="faint" style="font-size:12px;line-height:2;margin:-8px 0 10px">以下一手史料在本集叙事中被引用，点击可通读原文。</div><div class="sr-read-list">';
+      srcIds.forEach(function (cid) {
+        var c = srcChapterById(cid);
+        if (!c) return;
+        h += '<div class="sr-read-item rv" data-src="' + esc(c.id) + '">' +
+          srcBookBadge(c.book) + '<span class="sr-read-t">' + esc(c.title) + "</span>" +
+          (c.span ? '<span class="sr-read-span">' + esc(c.span) + "</span>" : "") + "</div>";
+      });
+      h += "</div></div>";
+    }
     if ((l.disputes || []).length) {
       h += '<div class="sec"><div class="sec-h">存在争议</div>';
       l.disputes.forEach(function (t) { h += '<div class="claim disputed">' + esc(t) + "</div>"; });
@@ -1070,21 +1090,79 @@
     });
   }
 
-  /* ---------- 史料 ---------- */
+  /* ---------- 史料原文（阅读中枢） ----------
+     定位：百家讲坛是叙事主线，这里是一手史料的延伸阅读。
+     《史记》20 篇 + 《资治通鉴》卷 7—12，可通读原文，并双向串联到讲坛集。 */
+  function srcChapterById(id) {
+    var arr = YS.chapters || [];
+    for (var i = 0; i < arr.length; i++) if (arr[i].id === id) return arr[i];
+    return null;
+  }
+  function srcBookBadge(book) {
+    if (book === "史记") return '<span class="badge badge-shiji">史记</span>';
+    if (book === "资治通鉴") return '<span class="badge badge-zztj">资治通鉴</span>';
+    return '<span class="badge badge-modern">' + esc(book) + "</span>";
+  }
   function viewSources() {
+    var all = YS.chapters || [];
+    var shiji = all.filter(function (c) { return c.book === "史记"; });
+    var zizhi = all.filter(function (c) { return c.book === "资治通鉴"; });
+    var totalChars = all.reduce(function (a, c) { return a + (c.chars || 0); }, 0);
+    function chapCard(c) {
+      var linked = (YS.chapterMap[c.id] || []).length;
+      return '<div class="sr-chap rv" data-src="' + esc(c.id) + '">' +
+        '<div class="sr-chap-top">' + srcBookBadge(c.book) + '<span class="sr-vol">卷 ' + esc(c.juan) + "</span></div>" +
+        '<div class="sr-chap-t">' + esc(c.title) + "</div>" +
+        '<div class="sr-chap-meta"><span>' + (c.chars || 0).toLocaleString() + " 字</span>" +
+        (linked ? '<span class="sr-link">关联 ' + linked + " 集讲坛</span>" : "") + "</div>" +
+        (c.span ? '<div class="sr-chap-span">' + esc(c.span) + "</div>" : "") + "</div>";
+    }
     var h = '<div class="wrap"><div style="padding:60px 0 0" class="rv">' +
-      '<div class="eyebrow">Sources</div><h1 class="h-big">史料来源</h1>' +
+      '<div class="eyebrow">Primary Sources</div>' +
+      '<h1 class="h-big">史料原文</h1>' +
       '<div class="rule-zhu"></div>' +
-      '<p class="lead">讲座中被引用的典籍，按被引次数排序。「史记」「汉书」为一手核验对象，讲座为解释与评价来源。</p></div>';
-    h += '<div class="sec">';
-    SOURCES.slice(0, 60).forEach(function (s) {
-      h += '<div class="src-card rv"><div class="src-book">' + esc(s.title) + "　" + esc(s.section || "") +
-        '<span>被引 ' + s.citations + " 次</span></div>" +
-        (s.topics && s.topics.length ? '<div class="src-flag">' + esc(s.topics.slice(0, 3).join(" / ")) + "</div>" : "") +
-        '<div class="chips" style="margin-top:10px">';
-      (s.episodes || []).slice(0, 16).forEach(function (n) { h += '<span class="chip" data-lec="' + n + '">' + n + "</span>"; });
-      h += "</div></div>";
+      '<p class="lead">这里是《大风歌》所据的一手史料，供延伸阅读与对照核验。《史记》二十篇、《资治通鉴》秦末汉初六卷，' +
+      "共 " + totalChars.toLocaleString() + " 字，按篇目 / 卷次可通读原文。</p>" +
+      '<div class="sr-note rv"><b>主线与补充：</b>本站的叙事骨架是王立群《百家讲坛·大风歌》45 集；' +
+      '这些原文是讲座引用的「一手证据」，用以学习、对照与查证，并非替代讲座本身。' +
+      '每篇史料都标注了它关联了哪些讲坛集，点开即可回到主线。</div></div>';
+
+    h += '<div class="sec"><div class="sec-h">史记 · 二十篇</div><div class="sr-grid">';
+    shiji.forEach(function (c) { h += chapCard(c); });
+    h += "</div></div>";
+    h += '<div class="sec"><div class="sec-h">资治通鉴 · 秦末汉初六卷（卷 7—12）</div><div class="sr-grid">';
+    zizhi.forEach(function (c) { h += chapCard(c); });
+    h += "</div></div>";
+    h += '<div style="height:60px"></div></div>';
+    return h;
+  }
+
+  /* 单篇史料正文阅读 */
+  function viewSource(id) {
+    var c = srcChapterById(id);
+    if (!c) return '<div class="wrap"><div style="padding:80px 0">未找到该史料篇章</div></div>';
+    var linked = (YS.chapterMap[id] || []).slice().sort(function (a, b) { return a - b; });
+    var h = '<div class="wrap-narrow"><div class="sr-read rv">' +
+      '<div class="back" data-goto="#/sources">返回史料原文</div>' +
+      '<div class="sr-read-head">' + srcBookBadge(c.book) +
+      '<span class="sr-vol">卷 ' + esc(c.juan) + "</span></div>" +
+      '<h1 class="h-big" style="font-size:34px">' + esc(c.title) + "</h1>" +
+      (c.span ? '<div class="sr-chap-span">' + esc(c.span) + "</div>" : "") +
+      '<div class="rule-zhu"></div>' +
+      '<div class="faint mono" style="font-size:11px;letter-spacing:.16em;margin-bottom:8px">原文 · ' + (c.chars || 0).toLocaleString() + " 字</div>";
+    (c.paras || []).forEach(function (p) {
+      h += '<p class="sr-para">' + esc(p) + "</p>";
     });
+    if (linked.length) {
+      var shown = linked.slice(0, 30);
+      h += '<div class="rule"></div><div class="sec"><div class="sec-h">相关讲坛 · ' + linked.length + " 集（回到主线）</div><div class=\"chips\">";
+      shown.forEach(function (n) { h += '<span class="chip" data-lec="' + n + '">第 ' + n + " 集</span>"; });
+      h += "</div>";
+      if (linked.length > shown.length)
+        h += '<div class="faint" style="font-size:12px;line-height:2">…另 ' + (linked.length - shown.length) + " 集亦引用本篇</div>";
+      h += '<div class="faint" style="font-size:12px;line-height:2;margin-top:6px">这些讲坛集在叙事中引用了本篇史料，点击芯片回到《大风歌》对应集。</div>';
+      h += "</div>";
+    }
     h += "</div><div style='height:60px'></div></div>";
     return h;
   }
@@ -1118,6 +1196,8 @@
         { t: "六幕章节", s: "Act Select", run: function () { go("#/acts"); } },
         { t: "纪年时间线", s: "前 210 — 前 195", run: function () { go("#/timeline"); } },
         { t: "人物关系", s: "Relations", run: function () { go("#/relations"); } },
+        { t: "讲坛 · 大风歌", s: "45 集", run: function () { go("#/lectures"); } },
+        { t: "史料原文", s: "史记 · 资治通鉴", run: function () { go("#/sources"); } },
         { t: "刘邦总评", s: "自信 / 魅力 / 用人", run: function () { go("#/traits"); } }
       ]);
       push("关键人物", PERSONS.filter(function (p) { return p.tier === "S"; }).map(pItem));
@@ -1129,6 +1209,9 @@
       push("讲坛", LECS.filter(function (l) {
         return l.title.indexOf(q) >= 0 || String(l.episode) === q || (l.summary || "").indexOf(q) >= 0;
       }).slice(0, 8).map(lItem));
+      push("史料", (YS.chapters || []).filter(function (c) {
+        return (c.title + c.book + (c.span || "")).indexOf(q) >= 0;
+      }).slice(0, 8).map(srcItem));
     }
     groups.forEach(function (g) { g.items.forEach(function (i) { palItems.push(i); }); });
     palIdx = 0;
@@ -1138,6 +1221,7 @@
   function eItem(e) { return { t: e.title, s: (e.yearText || yText(e.year)) + " · " + e.importance + " 级", run: function () { go("#/event/" + encodeURIComponent(e.id)); } }; }
   function rItem(r) { return { t: r.a + " × " + r.b, s: r.phases.length + " 阶段", run: function () { go("#/rel/" + encodeURIComponent(r.id)); } }; }
   function lItem(l) { return { t: "第 " + l.episode + " 集　" + l.title, s: l.unit, run: function () { go("#/lecture/" + l.episode); } }; }
+  function srcItem(c) { return { t: c.book + " · " + c.title, s: c.span || ("卷 " + c.juan), run: function () { go("#/source/" + c.id); } }; }
 
   function paintPal(groups) {
     if (!groups) {

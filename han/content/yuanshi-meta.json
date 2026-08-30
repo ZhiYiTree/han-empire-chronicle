@@ -1,0 +1,246 @@
+{
+ "shiji": [
+  {
+   "id": "shiji-xiang-yu-ben-ji",
+   "book": "史记",
+   "juan": "007",
+   "title": "项羽本纪",
+   "slug": "xiang-yu-ben-ji",
+   "path": "content/shiji/xiang-yu-ben-ji.txt",
+   "chars": 11174
+  },
+  {
+   "id": "shiji-gao-zu-ben-ji",
+   "book": "史记",
+   "juan": "008",
+   "title": "高祖本纪",
+   "slug": "gao-zu-ben-ji",
+   "path": "content/shiji/gao-zu-ben-ji.txt",
+   "chars": 11725
+  },
+  {
+   "id": "shiji-lv-tai-hou-ben-ji",
+   "book": "史记",
+   "juan": "009",
+   "title": "吕太后本纪",
+   "slug": "lv-tai-hou-ben-ji",
+   "path": "content/shiji/lv-tai-hou-ben-ji.txt",
+   "chars": 5448
+  },
+  {
+   "id": "shiji-chen-she-shi-jia",
+   "book": "史记",
+   "juan": "048",
+   "title": "陈涉世家",
+   "slug": "chen-she-shi-jia",
+   "path": "content/shiji/chen-she-shi-jia.txt",
+   "chars": 4390
+  },
+  {
+   "id": "shiji-xiao-xiang-guo-shi-jia",
+   "book": "史记",
+   "juan": "053",
+   "title": "萧相国世家",
+   "slug": "xiao-xiang-guo-shi-jia",
+   "path": "content/shiji/xiao-xiang-guo-shi-jia.txt",
+   "chars": 2300
+  },
+  {
+   "id": "shiji-cao-xiang-guo-shi-jia",
+   "book": "史记",
+   "juan": "054",
+   "title": "曹相国世家",
+   "slug": "cao-xiang-guo-shi-jia",
+   "path": "content/shiji/cao-xiang-guo-shi-jia.txt",
+   "chars": 2501
+  },
+  {
+   "id": "shiji-liu-hou-shi-jia",
+   "book": "史记",
+   "juan": "055",
+   "title": "留侯世家",
+   "slug": "liu-hou-shi-jia",
+   "path": "content/shiji/liu-hou-shi-jia.txt",
+   "chars": 5021
+  },
+  {
+   "id": "shiji-chen-cheng-xiang-shi-jia",
+   "book": "史记",
+   "juan": "056",
+   "title": "陈丞相世家",
+   "slug": "chen-cheng-xiang-shi-jia",
+   "path": "content/shiji/chen-cheng-xiang-shi-jia.txt",
+   "chars": 4406
+  },
+  {
+   "id": "shiji-jiang-hou-zhou-bo-shi-jia",
+   "book": "史记",
+   "juan": "057",
+   "title": "绛侯周勃世家",
+   "slug": "jiang-hou-zhou-bo-shi-jia",
+   "path": "content/shiji/jiang-hou-zhou-bo-shi-jia.txt",
+   "chars": 3515
+  },
+  {
+   "id": "shiji-wei-bao-peng-yue-lie-zhuan",
+   "book": "史记",
+   "juan": "090",
+   "title": "魏豹彭越列传",
+   "slug": "wei-bao-peng-yue-lie-zhuan",
+   "path": "content/shiji/wei-bao-peng-yue-lie-zhuan.txt",
+   "chars": 1901
+  },
+  {
+   "id": "shiji-qing-bu-lie-zhuan",
+   "book": "史记",
+   "juan": "091",
+   "title": "黥布列传",
+   "slug": "qing-bu-lie-zhuan",
+   "path": "content/shiji/qing-bu-lie-zhuan.txt",
+   "chars": 3372
+  },
+  {
+   "id": "shiji-huai-yin-hou-lie-zhuan",
+   "book": "史记",
+   "juan": "092",
+   "title": "淮阴侯列传",
+   "slug": "huai-yin-hou-lie-zhuan",
+   "path": "content/shiji/huai-yin-hou-lie-zhuan.txt",
+   "chars": 7806
+  },
+  {
+   "id": "shiji-han-xin-lu-wan-lie-zhuan",
+   "book": "史记",
+   "juan": "093",
+   "title": "韩信卢绾列传",
+   "slug": "han-xin-lu-wan-lie-zhuan",
+   "path": "content/shiji/han-xin-lu-wan-lie-zhuan.txt",
+   "chars": 3313
+  },
+  {
+   "id": "shiji-tian-dan-lie-zhuan",
+   "book": "史记",
+   "juan": "094",
+   "title": "田儋列传",
+   "slug": "tian-dan-lie-zhuan",
+   "path": "content/shiji/tian-dan-lie-zhuan.txt",
+   "chars": 2100
+  },
+  {
+   "id": "shiji-fan-li-teng-guan-lie-zhuan",
+   "book": "史记",
+   "juan": "095",
+   "title": "樊郦滕灌列传",
+   "slug": "fan-li-teng-guan-lie-zhuan",
+   "path": "content/shiji/fan-li-teng-guan-lie-zhuan.txt",
+   "chars": 5598
+  },
+  {
+   "id": "shiji-zhang-cheng-xiang-lie-zhuan",
+   "book": "史记",
+   "juan": "096",
+   "title": "张丞相列传",
+   "slug": "zhang-cheng-xiang-lie-zhuan",
+   "path": "content/shiji/zhang-cheng-xiang-lie-zhuan.txt",
+   "chars": 4543
+  },
+  {
+   "id": "shiji-li-sheng-lu-jia-lie-zhuan",
+   "book": "史记",
+   "juan": "097",
+   "title": "郦生陆贾列传",
+   "slug": "li-sheng-lu-jia-lie-zhuan",
+   "path": "content/shiji/li-sheng-lu-jia-lie-zhuan.txt",
+   "chars": 4942
+  },
+  {
+   "id": "shiji-liu-jing-shu-sun-tong-lie-zhuan",
+   "book": "史记",
+   "juan": "099",
+   "title": "刘敬叔孙通列传",
+   "slug": "liu-jing-shu-sun-tong-lie-zhuan",
+   "path": "content/shiji/liu-jing-shu-sun-tong-lie-zhuan.txt",
+   "chars": 3655
+  },
+  {
+   "id": "shiji-ji-bu-luan-bu-lie-zhuan",
+   "book": "史记",
+   "juan": "100",
+   "title": "季布栾布列传",
+   "slug": "ji-bu-luan-bu-lie-zhuan",
+   "path": "content/shiji/ji-bu-luan-bu-lie-zhuan.txt",
+   "chars": 2043
+  },
+  {
+   "id": "shiji-xiong-nu-lie-zhuan",
+   "book": "史记",
+   "juan": "110",
+   "title": "匈奴列传",
+   "slug": "xiong-nu-lie-zhuan",
+   "path": "content/shiji/xiong-nu-lie-zhuan.txt",
+   "chars": 10827
+  }
+ ],
+ "zizhi": [
+  {
+   "id": "zizhi-juan007",
+   "book": "资治通鉴",
+   "juan": "007",
+   "title": "秦纪二",
+   "slug": "juan007",
+   "span": "前 209 — 前 207",
+   "path": "content/zizhi/juan007.txt",
+   "chars": 9894
+  },
+  {
+   "id": "zizhi-juan008",
+   "book": "资治通鉴",
+   "juan": "008",
+   "title": "秦纪三",
+   "slug": "juan008",
+   "span": "前 207 — 前 206",
+   "path": "content/zizhi/juan008.txt",
+   "chars": 10076
+  },
+  {
+   "id": "zizhi-juan009",
+   "book": "资治通鉴",
+   "juan": "009",
+   "title": "汉纪一",
+   "slug": "juan009",
+   "span": "前 206 — 前 205",
+   "path": "content/zizhi/juan009.txt",
+   "chars": 9022
+  },
+  {
+   "id": "zizhi-juan010",
+   "book": "资治通鉴",
+   "juan": "010",
+   "title": "汉纪二",
+   "slug": "juan010",
+   "span": "前 204 — 前 203",
+   "path": "content/zizhi/juan010.txt",
+   "chars": 8214
+  },
+  {
+   "id": "zizhi-juan011",
+   "book": "资治通鉴",
+   "juan": "011",
+   "title": "汉纪三",
+   "slug": "juan011",
+   "span": "前 202 — 前 200",
+   "path": "content/zizhi/juan011.txt",
+   "chars": 8303
+  },
+  {
+   "id": "zizhi-juan012",
+   "book": "资治通鉴",
+   "juan": "012",
+   "title": "汉纪四",
+   "slug": "juan012",
+   "span": "前 199 — 前 195",
+   "path": "content/zizhi/juan012.txt",
+   "chars": 10270
+  }
+ ]
+}

@@ -942,3 +942,40 @@ html.lenis,html.lenis body{height:auto}
 .rg-focusing .rg-hint{color:var(--bo-dim);border-color:rgba(168,137,79,.28)}
 /* 图例上移，给状态栏让出位置 */
 .rg-legend{bottom:58px}
+
+/* ---------- 史料原文（阅读中枢 + 单篇阅读） ---------- */
+.sr-note{
+  margin:26px 0 4px;padding:15px 20px;
+  border:1px solid rgba(168,137,79,.26);background:rgba(168,137,79,.05);
+  border-radius:2px;font-size:13.5px;line-height:2;color:var(--bo-dim);
+}
+.sr-note b{color:var(--jin);font-weight:400}
+
+.sr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:14px}
+.sr-chap{
+  border:1px solid var(--line);padding:18px 18px 16px;background:rgba(216,205,187,.02);
+  cursor:pointer;transition:.35s var(--ease);position:relative;overflow:hidden;
+}
+.sr-chap:hover{border-color:var(--jin);background:rgba(168,137,79,.07);transform:translateY(-3px)}
+.sr-chap-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sr-vol{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--bo-faint)}
+.sr-chap-t{font-size:18px;letter-spacing:.06em;color:var(--bo);margin-bottom:10px}
+.sr-chap-meta{display:flex;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--bo-faint)}
+.sr-chap-meta .sr-link{color:var(--hud)}
+.sr-chap-span{margin-top:8px;font-size:11.5px;color:var(--bo-faint);font-family:var(--mono);letter-spacing:.06em}
+
+/* 单篇阅读 */
+.sr-read-head{display:flex;align-items:center;gap:12px;margin:26px 0 12px}
+.sr-read .sr-para{
+  font-family:var(--serif);font-size:16.5px;line-height:2.05;color:var(--bo);
+  margin:0 0 17px;text-align:justify;letter-spacing:.02em;
+}
+.sr-read .sr-para:first-of-type{text-indent:2em}
+.sr-read-list{display:flex;flex-direction:column;gap:8px}
+.sr-read-item{
+  display:flex;align-items:center;gap:12px;padding:11px 14px;cursor:pointer;
+  border:1px solid var(--line);background:rgba(216,205,187,.02);transition:.3s var(--ease);
+}
+.sr-read-item:hover{border-color:var(--zhu);background:rgba(184,59,43,.08);transform:translateX(3px)}
+.sr-read-t{font-size:15px;color:var(--bo);letter-spacing:.04em}
+.sr-read-span{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--bo-faint)}

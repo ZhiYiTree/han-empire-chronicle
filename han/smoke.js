@@ -75,6 +75,7 @@ global.requestAnimationFrame = function (f) { f(); };
 
 // 加载数据与应用
 eval(fs.readFileSync(path.join(dir, "data.js"), "utf8"));
+eval(fs.readFileSync(path.join(dir, "yuanshi.js"), "utf8"));
 let err = null;
 try {
   eval(fs.readFileSync(path.join(dir, "app.js"), "utf8"));
@@ -113,6 +114,8 @@ D.persons.forEach(p => routes.push("#/person/" + encodeURIComponent(p.id)));
 D.relations.forEach(r => routes.push("#/rel/" + encodeURIComponent(r.id)));
 ["起兵反秦", "楚汉战争", "开国建制", "功臣群像", "晚年危机", "人物总评"].forEach(u => routes.push("#/unit/" + encodeURIComponent(u)));
 routes.push("#/timeline", "#/relations", "#/lectures", "#/traits", "#/sources");
+const YS = global.window.HAN_YUANSHI || { chapters: [] };
+YS.chapters.slice(0, 8).forEach(c => routes.push("#/source/" + c.id));
 
 const fire = global.__handlers["hashchange"] || [];
 let fail = 0, empty = 0;
@@ -185,6 +188,38 @@ let relFail = 0;
 ].forEach(([ok, message]) => { if (!ok) { relFail++; console.log("  ✗", message); } });
 console.log(`关系网结构｜${relFail === 0 ? "通过" : "失败 " + relFail + " 项"}`);
 
+// 史料原文串联回归：中枢、单篇阅读、讲坛反链
+const YS2 = global.window.HAN_YUANSHI || { chapters: [], lecMap: {}, chapterMap: {} };
+global.location.hash = "#/sources";
+fire.forEach(f => f());
+const srcHub = getEl("app").innerHTML;
+const hubChaps = (srcHub.match(/class="sr-chap /g) || []).length;
+let srcFail = 0;
+[
+  [hubChaps === YS2.chapters.length, `史料中枢篇章卡应为 ${YS2.chapters.length}，实际 ${hubChaps}`],
+  [srcHub.includes("史记") && srcHub.includes("资治通鉴"), "史料中枢缺少两部书名分组"],
+  [srcHub.includes("主线与补充"), "史料中枢缺少主线 / 补充定位说明"]
+].forEach(([ok, message]) => { if (!ok) { srcFail++; console.log("  ✗", message); } });
+
+const linkedChap = YS2.chapters.find(c => (YS2.chapterMap[c.id] || []).length > 0) || YS2.chapters[0];
+if (linkedChap) {
+  global.location.hash = "#/source/" + linkedChap.id;
+  fire.forEach(f => f());
+  const srcRead = getEl("app").innerHTML;
+  [
+    [srcRead.includes('class="sr-para"'), "单篇阅读缺少正文段落"],
+    [srcRead.includes("相关讲坛"), "单篇阅读缺少反链讲坛区"]
+  ].forEach(([ok, message]) => { if (!ok) { srcFail++; console.log("  ✗", message); } });
+}
+const withSrc = D.lectures.find(l => (YS2.lecMap[String(l.episode)] || []).length > 0);
+if (withSrc) {
+  global.location.hash = "#/lecture/" + withSrc.episode;
+  fire.forEach(f => f());
+  if (!getEl("app").innerHTML.includes("延伸阅读 · 原始史料"))
+    { srcFail++; console.log("  ✗ 讲坛详情缺少「延伸阅读 · 原始史料」区块"); }
+}
+console.log(`史料原文串联｜${srcFail === 0 ? "通过" : "失败 " + srcFail + " 项"}`);
+
 // 数据完整性检查
 let warn = 0;
 function duplicateValues(rows, key) {
@@ -235,5 +270,5 @@ D.relations.forEach(r => {
 const S = D.events.filter(e => e.importance === "S").length;
 const withShiji = D.events.filter(e => (e.shiji || []).length).length;
 console.log(`S 级事件 ${S}｜含史书原文的 event ${withShiji}｜数据告警 ${warn}`);
-console.log(fail === 0 && warn === 0 && paletteFail === 0 && timelineFail === 0 && personFail === 0 && relFail === 0 ? "\n✔ 冒烟通过" : "\n⚠ 存在问题，见上");
-if (fail || warn || paletteFail || timelineFail || personFail || relFail) process.exit(1);
+console.log(fail === 0 && warn === 0 && paletteFail === 0 && timelineFail === 0 && personFail === 0 && relFail === 0 && srcFail === 0 ? "\n✔ 冒烟通过" : "\n⚠ 存在问题，见上");
+if (fail || warn || paletteFail || timelineFail || personFail || relFail || srcFail) process.exit(1);
