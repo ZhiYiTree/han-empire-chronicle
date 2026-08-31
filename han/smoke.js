@@ -115,7 +115,7 @@ D.relations.forEach(r => routes.push("#/rel/" + encodeURIComponent(r.id)));
 ["起兵反秦", "楚汉战争", "开国建制", "功臣群像", "晚年危机", "人物总评"].forEach(u => routes.push("#/unit/" + encodeURIComponent(u)));
 routes.push("#/timeline", "#/relations", "#/lectures", "#/traits", "#/sources");
 const YS = global.window.HAN_YUANSHI || { chapters: [] };
-YS.chapters.slice(0, 8).forEach(c => routes.push("#/source/" + c.id));
+YS.chapters.forEach(c => routes.push("#/source/" + c.id));
 
 const fire = global.__handlers["hashchange"] || [];
 let fail = 0, empty = 0;
@@ -209,6 +209,19 @@ if (linkedChap) {
   [
     [srcRead.includes('class="sr-para"'), "单篇阅读缺少正文段落"],
     [srcRead.includes("相关讲坛"), "单篇阅读缺少反链讲坛区"]
+  ].forEach(([ok, message]) => { if (!ok) { srcFail++; console.log("  ✗", message); } });
+}
+const gaozu = YS2.chapters.find(c => c.id === "shiji-gao-zu-ben-ji");
+if (gaozu) {
+  global.location.hash = "#/source/" + gaozu.id;
+  fire.forEach(f => f());
+  const gaozuRead = getEl("app").innerHTML;
+  const gaozuParas = (gaozuRead.match(/class="sr-passage(?=[\s"])/g) || []).length;
+  [
+    [gaozuParas === gaozu.paras.length,
+      `《高祖本纪》正文段落应为 ${gaozu.paras.length}，实际 ${gaozuParas}`],
+    [!gaozuRead.includes('class="sr-read rv"'),
+      "《高祖本纪》长文根容器不应使用整块 reveal 动画，否则正文会永久透明"]
   ].forEach(([ok, message]) => { if (!ok) { srcFail++; console.log("  ✗", message); } });
 }
 const withSrc = D.lectures.find(l => (YS2.lecMap[String(l.episode)] || []).length > 0);

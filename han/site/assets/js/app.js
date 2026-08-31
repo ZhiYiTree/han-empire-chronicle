@@ -1458,7 +1458,9 @@
     var linked = (YS.chapterMap[id] || []).slice().sort(function (a, b) { return a - b; });
     var citations = sourceCitationRows(c), matchedCount = 0, evidencePeople = [];
     citations.forEach(function (row) { row.people.forEach(function (name) { if (evidencePeople.indexOf(name) < 0) evidencePeople.push(name); }); });
-    var h = '<div class="wrap-narrow"><div class="sr-read rv" id="sourceReader">' +
+    // 正文容器可能长达数万像素；若整块使用 .rv，IntersectionObserver 的
+    // intersectionRatio 永远达不到 reveal 的 6% 阈值，长篇会一直 opacity:0。
+    var h = '<div class="wrap-narrow"><div class="sr-read" id="sourceReader">' +
       '<button class="back" data-back="#/sources">返回上一页</button>' +
       '<div class="sr-read-head">' + srcBookBadge(c.book) +
       '<span class="sr-vol">卷 ' + esc(c.juan) + "</span></div>" +
