@@ -4,6 +4,12 @@
 
 它不复刻节目，也不把讲坛观点当作史实；它更像一张可以反复回看的“汉初知识地图”。
 
+## 在线访问
+
+GitHub Pages：<https://zhiyitree.github.io/han-empire-chronicle/>
+
+每次向 `main` 分支推送 `han/site` 的改动后，GitHub Actions 会自动更新线上网页。
+
 ## 项目截图
 
 ### 人物关系图
